@@ -204,3 +204,13 @@
 	};
 
 }));
+
+//调用分页
+$("#J_orderListPages").pagination({
+	pageCount:10, 		//总页数10页
+	showData:5,  		//每页显示5条
+	current: 1,		//当前第几页
+	coping:true
+})
+	
+	
