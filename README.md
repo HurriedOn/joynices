@@ -198,7 +198,7 @@ alert(isWeiXinClient());
     css3:
 	background-attachment:fixed; color:hsla(0,0%,100%,.6)
 ### 27、汉字转 unicode
-### JQuery中$.cookie()方法的使用
+### 28、JQuery中$.cookie()方法的使用
 jquery.cookie.js插件：
 ```js
 <script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>  
