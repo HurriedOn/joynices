@@ -1,5 +1,4 @@
-# joynices
-# 项目小结
+# joynices 项目小结
 
 ### 1、后台系统模板：Amaze UI 
 
