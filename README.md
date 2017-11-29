@@ -1,6 +1,7 @@
 # joynices 项目小结
 
 ### 1、后台系统模板：Amaze UI 
+经典模块化前端框架：layer  http://www.layui.com/
 
 ### 2、全屏滚动 jquery.fullpage.js 
 	http://www.dowebok.com/77.html/fullpage.js 
