@@ -220,3 +220,5 @@ $.cookie('cookieName'); // 若cookie存在则返回'cookieValue'；若cookie不�
 //删除cookie：把ncookie的值设为null即可  
 $.cookie('the_cookie', null); 
 ```
+### 29、jquery-confirm | 功能强大的jQuery对话框和确认框插件
+https://github.com/craftpip/jquery-confirm
