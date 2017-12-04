@@ -48,3 +48,8 @@ wow.js中各种特效对应的类名
 | wow swing         | 从右往左、头部先向右倾斜，又向左倾斜，最后变为原来的形状、透明度为设定值不变 |
 | wow bounceInU     | 原位置不变、直接从不显示到显示（无过过渡效果） |
 | wow wobble        | 原位置不变、类似于一个人站在那左右晃头、透明度为设定值不变 |
+
+演示地址：https://daneden.github.io/animate.css/
+
+### 四、配合data-wow-duration（动画持续时间）、data-wow-delay（动画延迟时间）、data-wow-offset（元素的位置露出后距离底部多少像素执行）和data-wow-iteration（动画执行次数）这四个属性可以完成很多效果，主要还是多实践。
+### 五、IE6、IE7 等老旧浏览器不支持 CSS3 动画，所以没有效果；而 wow.js 也使用了 querySelectorAll 方法，IE 低版本会报错。为了达到更好的兼容，最好加一个浏览器及版本判断。
