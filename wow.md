@@ -15,3 +15,10 @@
 注意new WOW().init();中的WOW要大写，否则就没效果了。
 
 3、在css下方js上方写需要动画的元素（必须设置为块状或者行内块状！必须设置为块状或者行内块状！必须设置为块状或者行内块状！），并添加class类名。
+```html
+<div class="wow slideInLeft" data-wow-duration="2s" data-wow-delay="5s" data-wow-offset="10"  data-wow-iteration="10"></div>
+```
+类名前面的wow是每一个带动画的元素都要加的，slideInLeft就是说明动画样式。后面的data-wow-duration（动画持续时间）、data-wow-delay（动画延迟时间）、data-wow-offset（元素的位置露出后距离底部多少像素执行）和data-wow-iteration（动画执行次数）这四个属性可选可不选。
+
+4、测试了一下data-wow-offset和data-wow-iteration这两个属性，其中data-wow-offset="数值"中的数值是动画完成后元素距离显示器底部的位置，而不是距离浏览器窗口底部的位置。
+### 三、步入正题，下面依次测试各种class类名的动画效果。（力求通俗易懂）
