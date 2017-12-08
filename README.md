@@ -224,7 +224,8 @@ $.cookie('the_cookie', null);
 https://github.com/craftpip/jquery-confirm
 
 ### 30、ocument.documentElement和document.body的区别
-documentElement 和 body 相关说明：	
+documentElement 和 body 相关说明：		
+body是DOM对象里的body子节点，即 <body> 标签；
 body是DOM对象里的body子节点，即 <body> 标签；
 
 
