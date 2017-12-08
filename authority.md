@@ -62,13 +62,22 @@ mode ，从而通知IE采用其所支持的最新的模式。
     ID --> n_head_title --> ID遵循名称+_
     NAME --> N_Head_Title --> NAME属性命名遵循首个字母大写+_
     <div class="nHeadTitle" id="n_head_title" name="N_Head_Title"></div>
-
-    作者：kangkk
-    链接：http://www.jianshu.com/p/c361ced48e14
-    來源：简书
-    著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
   ```
 *  书写链接地址时避免重定向。
   ```
    href="http://www.kahn1990.com/" //即在URL地址后面加“/”
+  ```
+### css书写规范：
+*  为了欺骗W3C的验证工具,可将代码分为两个文件，一个是针对所有浏览器,一个只针对IE。即将所有符合W3C的代码写到一个文件中,而一些IE中必须而又不能通过W3C验证的代码（如:cursor:hand;）放到另一个文件中，再用下面的方法导入。
+  ```html
+    <!-- 放置所有浏览器样式-->
+    <link rel="stylesheet" type="text/css" href="">
+    <!-- 只放置IE必须，而不能通过w3c的-->
+    <!--[if IE]
+        <link rel="stylesheet" href="">
+    <![endif]-->
   ```
+*  CSS样式新建或修改尽量遵循以下原则。
+  根据新建样式的适用范围分为三级：全站级、产品级、页面级。<br/>
+  尽量通过继承和层叠重用已有样式。<br/>
+  不要轻易改动全站级CSS。改动后，要经过全面测试。<br/>
