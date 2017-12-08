@@ -22,7 +22,7 @@ ad、ads、adv、banner、sponsor、gg、guangg、guanggao 等
   ```html
   <meta charset="UTF-8">
   ```
-  <HEAD>中添加信息。
+ 在head标签中添加信息。
   ```html
     <meta name="author" content="smile@kang.cool">//作者
     <meta name="description" content="hello">//网页描述
