@@ -11,5 +11,15 @@
 *  文件名用英文单词，多个单词用驼峰命名法。
 *  一些浏览器会将含有这些词的作为广告拦截，文件命名、ID、CLASS等所有命名避免以上词汇。
 ``` 
-ad、ads、adv、banner、sponsor、gg、guangg、guanggao等
+ad、ads、adv、banner、sponsor、gg、guangg、guanggao 等
 ```
+### html书写规范：
+*  为每个HTML页面的第一行添加标准模式（standardmode）的声明，确保在每个浏览器中拥有一致的展现。
+```html
+<!DOCTYPE html>
+```
+文档类型声明统一为HTML5声明类型，编码统一为UTF-8。
+```html
+<meta charset="UTF-8">
+```
+<HEAD>中添加信息。
