@@ -55,3 +55,20 @@ mode ，从而通知IE采用其所支持的最新的模式。
     </body>
     </html>
   ```
+  引入JAVASCRIPT库在plugins文件中，文件名须包含库名称及版本号及是否为压缩版。
+*  编码均遵循XHTML标准,标签、属性、属性命名由小写英文、数字和_组成，且所有标签必须闭合，属性值必须用双引号"",避免使用中文拼音尽量简易并要求语义化。
+  ```
+    CLASS --> nHeadTitle --> CLASS遵循小驼峰命名法（little camel-case）
+    ID --> n_head_title --> ID遵循名称+_
+    NAME --> N_Head_Title --> NAME属性命名遵循首个字母大写+_
+    <div class="nHeadTitle" id="n_head_title" name="N_Head_Title"></div>
+
+    作者：kangkk
+    链接：http://www.jianshu.com/p/c361ced48e14
+    來源：简书
+    著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+  ```
+*  书写链接地址时避免重定向。
+  ```
+   href="http://www.kahn1990.com/" //即在URL地址后面加“/”
+  ```
