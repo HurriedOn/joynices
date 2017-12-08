@@ -16,11 +16,11 @@ ad、ads、adv、banner、sponsor、gg、guangg、guanggao 等
 ### html书写规范：
 *  为每个HTML页面的第一行添加标准模式（standardmode）的声明，确保在每个浏览器中拥有一致的展现。
   ```html
-  <!DOCTYPE html>
+    <!DOCTYPE html>
   ```
   文档类型声明统一为HTML5声明类型，编码统一为UTF-8。
   ```html
-  <meta charset="UTF-8">
+    <meta charset="UTF-8">
   ```
  在head标签中添加信息。
   ```html
@@ -35,5 +35,23 @@ ad、ads、adv、banner、sponsor、gg、guangg、guanggao 等
     <link rel="Shortcut Icon" href="favicon.ico">//收藏图标
     <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">//网页不会被缓存
   ```
-    IE支持通过特定<meta>标签来确定绘制当前页面所应该采用的IE版本。除非有强烈的特殊需求，否则最好是设置为edge
+  
+  IE支持通过特定<meta>标签来确定绘制当前页面所应该采用的IE版本。除非有强烈的特殊需求，否则最好是设置为edge
 mode ，从而通知IE采用其所支持的最新的模式。
+  ```html
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  ```
+*  非特殊情况下CSS样式文件外链至HEAD之间，JAVASCRIPT文件外链至页面底部。
+  ```html
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <!-- 逻辑代码 -->
+        <!-- 逻辑代码底部 -->
+        <script src="lib/jquery/jquery-2.1.1.min.js"></script>
+    </body>
+    </html>
+  ```
