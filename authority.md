@@ -35,3 +35,5 @@ ad、ads、adv、banner、sponsor、gg、guangg、guanggao 等
     <link rel="Shortcut Icon" href="favicon.ico">//收藏图标
     <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">//网页不会被缓存
   ```
+    IE支持通过特定<meta>标签来确定绘制当前页面所应该采用的IE版本。除非有强烈的特殊需求，否则最好是设置为edge
+mode ，从而通知IE采用其所支持的最新的模式。
