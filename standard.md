@@ -70,12 +70,6 @@ Web前端开发规范文档
 		ID --> n_head_title --> ID遵循名称+_
 		NAME --> N_Head_Title --> NAME属性命名遵循首个字母大写+_
 		<div class="nHeadTitle" id="n_head_title" name="N_Head_Title"></div>
->     当`JAVASCRIPT`获取单个元素时，通常使用document.getElementById来获取dom元素，document.getElementById兼容所有浏览器，但IE浏览器会混淆元素的ID和NAME属性，所以要区分ID和NAME命名。
->
-		<input type="text" name="test">
-		<div id="test"></div>
-		<button onclick="alert(document.getElementById('test').tagName)"></button>
-		<!-- ie6下为INPUT -->
 > -   特殊符号应使用转意符。
 >
 		<    -->    &lt;
