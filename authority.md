@@ -10,5 +10,6 @@
 ### 文件规范：
 *  文件名用英文单词，多个单词用驼峰命名法。
 *  一些浏览器会将含有这些词的作为广告拦截，文件命名、ID、CLASS等所有命名避免以上词汇。
-``` ad、ads、adv、banner、sponsor、gg、guangg、guanggao等
+``` 
+ad、ads、adv、banner、sponsor、gg、guangg、guanggao等
 ```
