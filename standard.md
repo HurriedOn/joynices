@@ -10,7 +10,7 @@ Web前端开发规范文档
 > - TAB键用两个空格代替（`WINDOWS`下TAB键占四个空格，`LINUX`下TAB键占八个空格）。
 > - `CSS`样式属性或者`javascript`代码后加“;”方便压缩工具“断句”。
 > - 文件内容编码均统一为`UTF-8`。
-> - `CSS`、`JAVASCRIPT`中的非注释类中文字符须转换成unicode编码使用,以避免编码错误时乱码显示。
+> - `CSS`、`javascript`中的非注释类中文字符须转换成unicode编码使用,以避免编码错误时乱码显示。
 
 ### 文件规范：
 -------------------
@@ -28,20 +28,14 @@ Web前端开发规范文档
 		<meta charset="UTF-8">
 >     `<HEAD>`中添加信息。
 >
-		<meta name="author" content="smile@kang.cool">//作者
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">//编码
 		<meta name="description" content="hello">//网页描述
 		<meta name="keywords" content="a,b,c">//关键字,“，”分隔
-		<meta http-equiv="expires" content="Wed, 26 Feb 1997 08：21：57 GMT">//设定网页的到期时间。一旦网页过期，必须到服务器上重新调阅
-		<meta http-equiv="Pragma" content="no-cache">//禁止浏览器从本地机的缓存中调阅页面内容
-		<meta http-equiv="Window-target" content="_top">//用来防止别人在框架里调用你的页面
-		<meta http-equiv="Refresh" content="5;URL=http://kahn1990.com/">//跳转页面，5指时间停留5秒 网页搜索机器人向导。用来告诉搜索机器人哪些页面需要索引，哪些页面不需要索引
-		<meta name="robots" content="none">//content的参数有all,none,index,noindex,follow,nofollow，默认是all
 		<link rel="Shortcut Icon" href="favicon.ico">//收藏图标
-		<meta http-equiv="Cache-Control" content="no-cache, must-revalidate">//网页不会被缓存
 >     `IE`支持通过特定&lt;meta&gt;标签来确定绘制当前页面所应该采用的`IE`版本。除非有强烈的特殊需求，否则最好是设置为`edge mode` ，从而通知`IE`采用其所支持的最新的模式。
 >
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-> -   非特殊情况下`CSS`样式文件外链至HEAD之间，`JAVASCRIPT`文件外链至页面底部。
+> -   非特殊情况下`CSS`样式文件外链至HEAD之间，`javascript`文件外链至页面底部。
 >
 		<!DOCTYPE html>
 		<html>
@@ -54,12 +48,12 @@ Web前端开发规范文档
 			<script src="lib/jquery/jquery-2.1.1.min.js"></script>
 		</body>
 		</html>
->     引入`JAVASCRIPT`库文件，文件名须包含库名称及版本号及是否为压缩版。
+>     引入`javascript`库文件，文件名须包含库名称及版本号及是否为压缩版。
 >
-		jQuery-1.8.3.min.js
->     引入`JAVASCRIPT`插件, 文件名格式为库名称+`.`+插件名称。
+		jquery-1.12.4.min.js
+>     引入`JAVASCRIPT`插件, 文件名格式为库名称+`-`+插件名称。
 >
-		jQuery.cookie.js
+		jquery-confirm-3.3.2.min.js
 > -   `HTML`属性应当按照以下给出的顺序依次排列，来确保代码的易读性。
 >
 		class
