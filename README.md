@@ -224,8 +224,12 @@ $.cookie('the_cookie', null);
 https://github.com/craftpip/jquery-confirm
 
 ### 30、ocument.documentElement和document.body的区别
-documentElement 和 body 相关说明：		
+documentElement 和 body 相关说明：
+
 body是DOM对象里的body子节点，即 <body> 标签；
-body是DOM对象里的body子节点，即 <body> 标签；
+	
+documentElement 是整个节点树的根节点root，即<html> 标签；
+	
+以HTML超文本标记语言为例：整个文档的一个根就是,在DOM中可以使用document.documentElement来访问它，它就是整个节点树的根节点。而body是子节点，要访问到body标签，在脚本中应该写：document.body。
 
 
