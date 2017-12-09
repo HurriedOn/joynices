@@ -80,7 +80,7 @@ Web前端开发规范文档
 >
 	   <div class="inputList">
 		<label class="placeholder" for="invoice_email">收票人邮箱</label>
-		<input class="invoiceInput" type="email" name="invoice_email" id="J_invoice_email"  autocomplete="off" />
+		<input class="invoiceInput" type="email" name="invoice_email" id="J_invoice_email" autocomplete="off" />
 	   </div>
 > -   多用无兼容性问题的`HTML`内置标签,比如SPAN、EM、STRONG、OPTGROUP、LABEL等,需要自定义`HTML`标签属性时，首先考虑是否存在已有的合适标签可替换，如果没有,可使用须以“`data-`”为前缀来添加自定义属性，避免使用其他命名方式。
 > -   语义化`HTML`。
@@ -164,13 +164,6 @@ Web前端开发规范文档
 >     优化`CSS`选择器。
 >
 		#header a { color: #444; };/*CSS选择器是从右边到左边进行匹配*/
->     浏览器将检查整个文档中的所有链接和每个链接的父元素，并遍历文档树去查找ID为header的祖先元素，如果找不到header将追溯到文档的根节点，解决方法如下。
->
-		避免使用通配规则和相邻兄弟选择符、子选择符,、后代选择符、属性选择符等选择器
-		不要限定id选择符，如div#header（提权的除外）
-		不要限定类选择器，如ul.recommend（提权的除外）
-		不要使用 ul li a 这样长的选择符
-		避免使用标签子选择符，如#header > li > a
 > -   使用`z-index`属性尽量`z-index`的值不要超过150（通用组的除外），页面中的元素内容的`z-index`不能超过10（提示框等模块除外但维持在150以下），不允许直接使用（999\~9999）之间大值。
 > -   尽量避免使用CSS Hack。
 >
