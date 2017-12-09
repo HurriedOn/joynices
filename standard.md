@@ -66,19 +66,21 @@ Web前端开发规范文档
 >     标签、属性、属性命名由小写英文、数字和\_组成，且所有标签必须闭合，属性值必须用双引号`""`,
 >     避免使用中文拼音尽量简易并要求语义化。
 >
+		CLASS --> cartBox --> CLASS除了bootstrap.css外，遵循小驼峰命名法（little camel-case）
 		ID --> J_cartBox --> ID遵循名称+J_
+		<div class="col-md-4"></div>	
 		<div class="cartBox" id="J_cartBox" ></div>
 > -   特殊符号应使用转意符。
 >
 		<    -->    &lt;
 		>    -->    &gt;
 		空格  -->    &nbsp;
-> -   含有描述性表单元素（`INPUT`，`TEXTAREA`）添加`LABEL`。
+> -   含有描述性表单元素（`input`，`textarea`）添加`label`。
 >
-		<p>
-			<label for="test">测试</label>
-			<input type="text" id="test" />
-		</p>
+		<div class="inputList">
+			<label class="placeholder" for="invoice_email">收票人邮箱</label>
+			<input class="invoiceInput" type="email" name="invoice_email" id="J_invoice_email"  autocomplete="off" />
+		</div>
 > -   多用无兼容性问题的`HTML`内置标签,比如SPAN、EM、STRONG、OPTGROUP、LABEL等,需要自定义`HTML`标签属性时，首先考虑是否存在已有的合适标签可替换，如果没有,可使用须以“`data-`”为前缀来添加自定义属性，避免使用其他命名方式。
 > -   语义化`HTML`。
 > -   尽可能减少`<DIV>`嵌套。
