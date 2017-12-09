@@ -180,30 +180,7 @@ Web前端开发规范文档
 		@media all and (-webkit-min-device-pixel-ratio:0) { … }; /* saf3+/chrome1+ */
 		@media all and (-webkit-min-device-pixel-ratio:10000),not all and (-webkit-min-device-pixel-ratio:0) { … }; /* opera */
 		@media screen and (max-device-width: 480px) { … }; /* iPhone/mobile webkit */
->     避免使用低效的选择器。
->
-		body > * {…};
-		ul > li > a {…};
-		#footer > h3 {…};
-		ul#top_blue_nav {…};
-		searbar span.submit a { … }; /* 反面示例 */
->
-> -   六个不要三个避免一个使用。
->
-		不要在标签上直接写样式
-		不要在CSS中使用expression
-		不要在CSS中使用@import
-		不要在CSS中使用!important
-		不要在CSS中使用“*”选择符
-		不要将CSS样式写为单行
-		避免使用filter
-		避免使用行内（inline）样式
-		避免使用“*”设置{margin: 0; padding: 0;}
-		使用after或overflow的方式清浮动
 > -   减少使用影响性能的属性。
->
-		position:absolute;
-		float:left;//如这些定位或浮动属性
 >
 		减少在`CSS`中使用滤镜表达式和图片repeat,
 		尤其在body当中,渲染性能极差, 如果需要用repeat的话,
