@@ -78,10 +78,10 @@ Web前端开发规范文档
 		空格  -->    &nbsp;
 > -   含有描述性表单元素（`input`，`textarea`）添加`label`。
 >
-	<div class="inputList">
+	   <div class="inputList">
 		<label class="placeholder" for="invoice_email">收票人邮箱</label>
 		<input class="invoiceInput" type="email" name="invoice_email" id="J_invoice_email"  autocomplete="off" />
-	</div>
+	   </div>
 > -   多用无兼容性问题的`HTML`内置标签,比如SPAN、EM、STRONG、OPTGROUP、LABEL等,需要自定义`HTML`标签属性时，首先考虑是否存在已有的合适标签可替换，如果没有,可使用须以“`data-`”为前缀来添加自定义属性，避免使用其他命名方式。
 > -   语义化`HTML`。
 > -   尽可能减少`<DIV>`嵌套。
