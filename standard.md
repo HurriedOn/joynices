@@ -32,7 +32,8 @@ Web前端开发规范文档
 		<meta name="description" content="hello">//网页描述
 		<meta name="keywords" content="a,b,c">//关键字,“，”分隔
 		<link rel="Shortcut Icon" href="favicon.ico">//收藏图标
->     `IE`支持通过特定&lt;meta&gt;标签来确定绘制当前页面所应该采用的`IE`版本。除非有强烈的特殊需求，否则最好是设置为`edge mode` ，从而通知`IE`采用其所支持的最新的模式。
+>     `IE`支持通过特定&lt;meta&gt;标签来确定绘制当前页面所应该采用的`IE`版本。
+>     除非有强烈的特殊需求，否则最好是设置为`edge mode` ，从而通知`IE`采用其所支持的最新的模式。
 >
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 > -   非特殊情况下`CSS`样式文件外链至HEAD之间，`javascript`文件外链至页面底部。
