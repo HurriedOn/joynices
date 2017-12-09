@@ -66,10 +66,8 @@ Web前端开发规范文档
 >     标签、属性、属性命名由小写英文、数字和\_组成，且所有标签必须闭合，属性值必须用双引号`""`,
 >     避免使用中文拼音尽量简易并要求语义化。
 >
-		CLASS --> nHeadTitle --> CLASS遵循小驼峰命名法（little camel-case）
-		ID --> n_head_title --> ID遵循名称+_
-		NAME --> N_Head_Title --> NAME属性命名遵循首个字母大写+_
-		<div class="nHeadTitle" id="n_head_title" name="N_Head_Title"></div>
+		ID --> J_cartBox --> ID遵循名称+J_
+		<div class="cartBox" id="J_cartBox" ></div>
 > -   特殊符号应使用转意符。
 >
 		<    -->    &lt;
