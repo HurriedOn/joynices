@@ -26,7 +26,7 @@ Web前端开发规范文档
 >     `文档类型声明`统一为HTML5声明类型，`编码`统一为UTF-8。
 >
 		<meta charset="UTF-8">
->     `<HEAD>`中添加信息。
+>     `<head>`中添加信息。
 >
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">//编码
 		<meta name="description" content="hello">//网页描述
