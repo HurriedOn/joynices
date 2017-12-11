@@ -67,10 +67,10 @@
 >     标签、属性、属性命名由小写英文、数字和\_组成，且所有标签必须闭合，属性值必须用双引号`""`,
 >     避免使用中文拼音尽量简易并要求语义化。
 >
-		CLASS --> cartBox --> CLASS除了bootstrap.css外，遵循小驼峰命名法（little camel-case）
+		CLASS --> section-address --> CLASS遵循中划线命名法
 		ID --> J_cartBox --> ID遵循名称+J_
 		<div class="col-md-4"></div>	
-		<div class="cartBox" id="J_cartBox" ></div>
+		<div class="cart-box" id="J_cartBox" ></div>
 > -   特殊符号应使用转意符。
 >
 		<    -->    &lt;
