@@ -41,12 +41,12 @@
 		<!DOCTYPE html>
 		<html>
 		<head>
-			<link rel="stylesheet" href="css/main.css">
+			<link rel="stylesheet" type="text/css" href="assets/styles/base.css">
 		</head>
 		<body>
 			<!-- 逻辑代码 -->
 			<!-- 逻辑代码底部 -->
-			<script src="lib/jquery/jquery-2.1.1.min.js"></script>
+			<script type="text/javascript" src="assets/scripts/base.min.js"></script>
 		</body>
 		</html>
 >     引入`javascript`库文件，文件名须包含库名称及版本号及是否为压缩版。
