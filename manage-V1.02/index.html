@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>卓耐斯后台管理系统</title>
+    <meta name="description" content="首页">
+    <meta name="keywords" content="index">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="icon" type="image/png" href="assets/i/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+    <meta name="apple-mobile-web-app-title" content="Joynices" />
+    <link rel="stylesheet" href="assets/css/amazeui.min.css" />
+    <link rel="stylesheet" href="assets/css/app.css">
+    <script type="text/javascript" src="assets/js/echarts.min.js" ></script>
+    <script src="assets/js/jquery.min.js"></script>
+</head>
+<body>
+    <script type="text/javascript" src="assets/js/theme.js" ></script>
+    <div class="am-g tpl-g">
+        <!-- 头部 -->
+        <header>
+            <div class="am-fl tpl-header-logo">
+                <a href="javascript:;"><img src="assets/img/logo.png" alt=""></a>
+            </div>
+            <div class="tpl-header-fluid">
+                <div class="am-fl tpl-header-switch-button am-icon-list"><span></span></div>
+                <div class="am-fr tpl-header-navbar">
+                    <ul>
+                        <li class="am-text-sm tpl-header-navbar-welcome">
+                            <a href="javascript:;">欢迎你, <span>admin01</span> </a>
+                        </li>
+                        <li class="am-dropdown" data-am-dropdown>
+                            <a href="javascript:;" class="am-dropdown-toggle" data-am-dropdown-toggle>
+                                <i class="am-icon-bell"></i>
+                                <span class="am-badge am-badge-warning am-round item-feed-badge">5</span>
+                            </a>
+                            <ul class="am-dropdown-content tpl-dropdown-content">
+                                <li class="tpl-dropdown-menu-notifications">
+                                    <a href="javascript:;" class="tpl-dropdown-menu-notifications-item am-cf">
+                                        <div class="tpl-dropdown-menu-notifications-title">
+                                            <i class="am-icon-line-chart"></i>
+                                            <span> 有6笔新的销售订单</span>
+                                        </div>
+                                        <div class="tpl-dropdown-menu-notifications-time">
+                                            12分钟前
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="tpl-dropdown-menu-notifications">
+                                    <a href="javascript:;" class="tpl-dropdown-menu-notifications-item am-cf">
+                                        <div class="tpl-dropdown-menu-notifications-title">
+                                            <i class="am-icon-star"></i>
+                                            <span> 有3个来自人事部的消息</span>
+                                        </div>
+                                        <div class="tpl-dropdown-menu-notifications-time">
+                                            30分钟前
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="tpl-dropdown-menu-notifications">
+                                    <a href="javascript:;" class="tpl-dropdown-menu-notifications-item am-cf">
+                                        <div class="tpl-dropdown-menu-notifications-title">
+                                            <i class="am-icon-folder-o"></i>
+                                            <span> 上午开会记录存档</span>
+                                        </div>
+                                        <div class="tpl-dropdown-menu-notifications-time">
+                                            1天前
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="tpl-dropdown-menu-notifications">
+                                    <a href="order.html" class="tpl-dropdown-menu-notifications-item am-cf">
+                                        <i class="am-icon-bell"></i> 进入列表…
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="am-text-sm">
+                            <a href="login.html">
+                                <span class="am-icon-sign-out"></span> 退出
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!-- 风格切换 -->
+        <div class="tpl-skiner">
+            <div class="tpl-skiner-toggle am-icon-cog">
+            </div>
+            <div class="tpl-skiner-content">
+                <div class="tpl-skiner-content-title">选择主题</div>
+                <div class="tpl-skiner-content-bar">
+                    <span class="skiner-color skiner-white" data-color="theme-white"></span>
+                    <span class="skiner-color skiner-black" data-color="theme-black"></span>
+                </div>
+            </div>
+        </div>
+        <!-- 侧边导航栏 -->
+        <div class="left-sidebar">
+            <!-- 用户信息 -->
+            <div class="tpl-sidebar-user-panel">
+                <div class="tpl-user-panel-slide-toggleable">
+                    <div class="tpl-user-panel-profile-picture">
+                        <img src="assets/img/user06.png" alt="">
+                    </div>
+                    <span class="user-panel-logged-in-text">
+              			<i class="am-icon-circle-o am-text-success tpl-user-panel-status-icon"></i> admin01
+                    </span>
+                </div>
+            </div>
+            <!-- 菜单 -->
+            <ul class="sidebar-nav">
+                <li class="sidebar-nav-heading">菜单 <span class="sidebar-nav-heading-info"> menu</span></li>
+                <li class="sidebar-nav-link">
+                    <a href="javascript:;" class="active">
+                        <i class="am-icon-home sidebar-nav-link-logo"></i> 首页
+                    </a>
+                </li>
+                <li class="sidebar-nav-link">
+                    <a href="product.html">
+                        <i class="am-icon-plane sidebar-nav-link-logo"></i> 产品管理
+                    </a>
+                </li>
+                <li class="sidebar-nav-link">
+                    <a href="javascript:;" class="sidebar-nav-sub-title">
+                        <i class="am-icon-credit-card sidebar-nav-link-logo"></i> 交易管理
+                        <span class="am-icon-chevron-down am-fr am-margin-right-sm sidebar-nav-sub-ico"></span>
+                    </a>
+                    <ul class="sidebar-nav sidebar-nav-sub">
+                        <li class="sidebar-nav-link">
+                            <a href="order.html">
+                                <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 订单管理
+                            </a>
+                        </li>
+                        <li class="sidebar-nav-link">
+                            <a href="transaction.html">
+                                <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 交易信息
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidebar-nav-link">
+                    <a href="javascript:;" class="sidebar-nav-sub-title">
+                        <i class="am-icon-comments-o sidebar-nav-link-logo"></i> 消息管理
+                        <span class="am-icon-chevron-down am-fr am-margin-right-sm sidebar-nav-sub-ico"></span>
+                    </a>
+                    <ul class="sidebar-nav sidebar-nav-sub">
+                        <li class="sidebar-nav-link">
+                            <a href="activity.html">
+                                <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 商城消息
+                            </a>
+                        </li>
+                        <li class="sidebar-nav-link">
+                            <a href="system.html">
+                                <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 系统消息
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidebar-nav-link">
+                    <a href="account.html">
+                        <i class="am-icon-users sidebar-nav-link-logo"></i> 管理员管理
+                    </a>
+                </li>
+                <li class="sidebar-nav-link">
+                    <a href="login.html">
+                        <i class="am-icon-key sidebar-nav-link-logo"></i> 登录
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- 内容区域 -->
+        <div class="tpl-content-wrapper">
+            <div class="container-fluid am-cf">
+                <div class="row">
+                    <div class="am-u-sm-12 am-u-md-12 am-u-lg-9">
+                        <div class="page-header-heading"><span class="am-icon-home page-header-heading-icon"></span> 首页 <small>Joyncies</small></div>
+                        <p class="page-header-description"></p>
+                    </div>
+                    <!--<div class="am-u-lg-3 tpl-index-settings-button">
+                        <button type="button" class="page-header-button"><span class="am-icon-paint-brush"></span> 设置</button>
+                    </div>-->
+                </div>
+            </div>
+
+            <div class="row-content am-cf">
+                <div class="row  am-cf">
+                    <div class="am-u-lg-3 am-u-md-6 am-u-sm-12">
+	                    <div class="dashboard-stat blue">
+	                        <div class="visual"><i class="am-icon-user"></i></div>
+	                        <div class="details">
+	                            <div class="number"> 1349 </div>
+	                            <div class="desc"> 商城用户 </div>
+	                        </div>
+	                        <a class="more" href="#"> 查看更多<i class="am-icon-ellipsis-h"></i></a>
+	                    </div>
+	                </div>
+	                <div class="am-u-lg-3 am-u-md-6 am-u-sm-12">
+	                    <div class="dashboard-stat red">
+	                        <div class="visual"><i class="am-icon-shopping-cart"></i></div>
+	                        <div class="details">
+	                            <div class="number"> 786 </div>
+	                            <div class="desc"> 商城订单 </div>
+	                        </div>
+	                        <a class="more" href="#"> 查看更多<i class="am-icon-ellipsis-h"></i></a>
+	                    </div>
+	                </div>
+	                <div class="am-u-lg-3 am-u-md-6 am-u-sm-12">
+	                    <div class="dashboard-stat green">
+	                        <div class="visual"><i class="am-icon-bar-chart-o"></i></div>
+	                        <div class="details">
+	                            <div class="number"> 653 </div>
+	                            <div class="desc"> 交易记录 </div>
+	                        </div>
+	                        <a class="more" href="#"> 查看更多<i class="am-icon-ellipsis-h"></i></a>
+	                    </div>
+	                </div>
+	                <div class="am-u-lg-3 am-u-md-6 am-u-sm-12">
+	                    <div class="dashboard-stat purple">
+	                        <div class="visual"><i class="am-icon-tags"></i></div>
+	                        <div class="details">
+	                            <div class="number"> 786 </div>
+	                            <div class="desc"> 分销记录 </div>
+	                        </div>
+	                        <a class="more" href="#"> 查看更多<i class="am-icon-ellipsis-h"></i></a>
+	                    </div>
+	                </div>
+	            </div>
+                <div class="row">
+	       			<div class="am-u-md-12 am-u-sm-12 row-mb">
+	                    <div class="tpl-portlet">
+	                        <div class="tpl-portlet-title">
+	                            <div class="tpl-caption font-green ">
+	                                <i class="am-icon-cloud-download"></i>
+	                                <span> 当月销售统计</span>
+	                            </div>
+	                        </div>
+	                       <div class="tpl-echarts tpl-chart-mb" id="tpl-echarts-A"></div>
+	                    </div>
+	                </div>
+	       		</div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="assets/js/amazeui.min.js"></script>
+    <script type="text/javascript" src="assets/js/app.js" ></script>
+	<script type="text/javascript">
+		var echartsA = echarts.init(document.getElementById('tpl-echarts-A'));
+		optionA = {
+				    tooltip : {
+				        trigger: 'axis'
+				    },
+				    color: ['#2ec7c9','#b6a2de'],
+				    toolbox: {
+				        show : true,
+				        feature : {
+				            mark : {show: true},
+				            dataView : {show: true, readOnly: false},
+				            magicType: {show: true, type: ['line', 'bar']},
+				            restore : {show: true},
+				            saveAsImage : {show: true}
+				        }
+				    },
+				    calculable : true,
+				    legend: {
+				        data:['成交订单','成交金额']
+				    },
+				    xAxis : [
+				        {
+				            type : 'category',
+				            data : ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','125','26','27','28','29','30','31']
+				        }
+				    ],
+				    yAxis : [
+				        {
+				            type : 'value',
+				            name : '订单',
+				            axisLabel : {
+				                formatter: '{value} 单'
+				            }
+				        },
+				        {
+				            type : 'value',
+				            name : '金额',
+				            axisLabel : {
+				                formatter: '{value} 元'
+				            }
+				        }
+				    ],
+				    series : [
+				
+				        {
+				            name:'成交订单',
+				            type:'bar',
+				            data:[20, 49, 70, 232, 26, 67, 136, 162, 36, 20, 64, 33,26, 67, 136, 162, 36, 20, 64,]
+				        },
+				        {
+				            name:'成交金额',
+				            type:'line',
+				            yAxisIndex: 1,
+				            data:[1124, 2233, 2544, 7543,1055,2642, 4037,5346,1305,1654, 2320,2242,2656,3547,4346, 6962, 3456, 3020, 4664,]
+				        }
+				    ]
+				};
+        echartsA.setOption(optionA);
+	</script>
+</body>
+
+</html>

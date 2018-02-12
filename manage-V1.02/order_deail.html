@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <title>订单管理-卓耐斯后台管理系统</title>
+	    <meta name="description" content="首页">
+	    <meta name="keywords" content="index">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta name="renderer" content="webkit">
+	    <meta http-equiv="Cache-Control" content="no-siteapp" />
+	    <link rel="icon" type="image/png" href="assets/i/favicon.png">
+	    <meta name="apple-mobile-web-app-title" content="Joynices" />
+	    <link rel="stylesheet" href="assets/css/amazeui.min.css" />
+	    <link rel="stylesheet" href="assets/css/app.css">
+	    <script src="assets/js/jquery.min.js"></script>
+	</head>
+	<body>
+		<script type="text/javascript" src="assets/js/theme.js" ></script>
+	<div class="am-g tpl-g">
+         <!-- 头部 -->
+        <header>
+            <div class="am-fl tpl-header-logo">
+                <a href="javascript:;"><img src="assets/img/logo.png" alt=""></a>
+            </div>
+            <div class="tpl-header-fluid">
+                <div class="am-fl tpl-header-switch-button am-icon-list"><span></span></div>
+                <div class="am-fr tpl-header-navbar">
+                    <ul>
+                        <li class="am-text-sm tpl-header-navbar-welcome">
+                            <a href="javascript:;">欢迎你, <span>admin01</span> </a>
+                        </li>
+                        <li class="am-dropdown" data-am-dropdown>
+                            <a href="javascript:;" class="am-dropdown-toggle" data-am-dropdown-toggle>
+                                <i class="am-icon-bell"></i>
+                                <span class="am-badge am-badge-warning am-round item-feed-badge">5</span>
+                            </a>
+                            <ul class="am-dropdown-content tpl-dropdown-content">
+                                <li class="tpl-dropdown-menu-notifications">
+                                    <a href="javascript:;" class="tpl-dropdown-menu-notifications-item am-cf">
+                                        <div class="tpl-dropdown-menu-notifications-title">
+                                            <i class="am-icon-line-chart"></i>
+                                            <span> 有6笔新的销售订单</span>
+                                        </div>
+                                        <div class="tpl-dropdown-menu-notifications-time">
+                                            12分钟前
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="tpl-dropdown-menu-notifications">
+                                    <a href="javascript:;" class="tpl-dropdown-menu-notifications-item am-cf">
+                                        <div class="tpl-dropdown-menu-notifications-title">
+                                            <i class="am-icon-star"></i>
+                                            <span> 有3个来自人事部的消息</span>
+                                        </div>
+                                        <div class="tpl-dropdown-menu-notifications-time">
+                                            30分钟前
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="tpl-dropdown-menu-notifications">
+                                    <a href="javascript:;" class="tpl-dropdown-menu-notifications-item am-cf">
+                                        <div class="tpl-dropdown-menu-notifications-title">
+                                            <i class="am-icon-folder-o"></i>
+                                            <span> 上午开会记录存档</span>
+                                        </div>
+                                        <div class="tpl-dropdown-menu-notifications-time">
+                                            1天前
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="tpl-dropdown-menu-notifications">
+                                    <a href="order.html" class="tpl-dropdown-menu-notifications-item am-cf">
+                                        <i class="am-icon-bell"></i> 进入列表…
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="am-text-sm">
+                            <a href="login.html">
+                                <span class="am-icon-sign-out"></span> 退出
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!-- 风格切换 -->
+        <div class="tpl-skiner">
+            <div class="tpl-skiner-toggle am-icon-cog">
+            </div>
+            <div class="tpl-skiner-content">
+                <div class="tpl-skiner-content-title">选择主题</div>
+                <div class="tpl-skiner-content-bar">
+                    <span class="skiner-color skiner-white" data-color="theme-white"></span>
+                    <span class="skiner-color skiner-black" data-color="theme-black"></span>
+                </div>
+            </div>
+        </div>
+        <!-- 侧边导航栏 -->
+        <div class="left-sidebar">
+            <!-- 用户信息 -->
+            <div class="tpl-sidebar-user-panel">
+                <div class="tpl-user-panel-slide-toggleable">
+                    <div class="tpl-user-panel-profile-picture">
+                        <img src="assets/img/user06.png" alt="">
+                    </div>
+                    <span class="user-panel-logged-in-text">
+              			<i class="am-icon-circle-o am-text-success tpl-user-panel-status-icon"></i> admin01
+                    </span>
+                </div>
+            </div>
+            <!-- 菜单 -->
+            <ul class="sidebar-nav">
+                <li class="sidebar-nav-heading">菜单 <span class="sidebar-nav-heading-info"> menu</span></li>
+                <li class="sidebar-nav-link">
+                    <a href="index.html">
+                        <i class="am-icon-home sidebar-nav-link-logo"></i> 首页
+                    </a>
+                </li>
+                <li class="sidebar-nav-link">
+                    <a href="product.html">
+                        <i class="am-icon-plane sidebar-nav-link-logo"></i> 产品管理
+                    </a>
+                </li>
+                <li class="sidebar-nav-link">
+                    <a href="javascript:;" class="sidebar-nav-sub-title active">
+                        <i class="am-icon-credit-card sidebar-nav-link-logo"></i> 交易管理
+                        <span class="am-icon-chevron-down am-fr am-margin-right-sm sidebar-nav-sub-ico sidebar-nav-sub-ico-rotate"></span>
+                    </a>
+                    <ul class="sidebar-nav sidebar-nav-sub" style="display:block;">
+                        <li class="sidebar-nav-link">
+                            <a href="order.html" class="active">
+                                <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 订单管理
+                            </a>
+                        </li>
+                        <li class="sidebar-nav-link">
+                            <a href="transaction.html">
+                                <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 交易信息
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidebar-nav-link">
+                    <a href="javascript:;" class="sidebar-nav-sub-title">
+                        <i class="am-icon-comments-o sidebar-nav-link-logo"></i> 消息管理
+                        <span class="am-icon-chevron-down am-fr am-margin-right-sm sidebar-nav-sub-ico"></span>
+                    </a>
+                    <ul class="sidebar-nav sidebar-nav-sub">
+                        <li class="sidebar-nav-link">
+                            <a href="activity.html">
+                                <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 商城消息
+                            </a>
+                        </li>
+                        <li class="sidebar-nav-link">
+                            <a href="system.html">
+                                <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 系统消息
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidebar-nav-link">
+                    <a href="account.html">
+                        <i class="am-icon-users sidebar-nav-link-logo"></i> 管理员管理
+                    </a>
+                </li>
+                <li class="sidebar-nav-link">
+                    <a href="login.html">
+                        <i class="am-icon-key sidebar-nav-link-logo"></i> 登录
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- 内容区域 -->
+        <div class="tpl-content-wrapper">
+        	<div class="container-fluid am-cf">
+                    <div class="page-header-heading"><span class="am-icon-table page-header-heading-icon"></span> 订单详情 </div>
+                    <div class="Numbering">订单编号：<b>61567833543</b></div>
+            </div>
+            <div class="row-content am-cf order-deail-tab">
+            	<div class="row">
+            		<div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
+            			<div class="widget am-cf">
+            				<div class="widget-head am-cf">
+	                            <div class="widget-title  am-cf">收件人信息</div>
+	                        </div>
+            				<div class="widget-body am-fr order-Consignee-info">
+            					<div class="am-u-sm-12 am-u-md-12 am-u-lg-4">
+            						<label class="label_name am-fl"> 收件人姓名： </label>
+         							<div class="o_content">张孝全</div>
+            					</div>
+            					<div class="am-u-sm-12 am-u-md-12 am-u-lg-4">
+            						<label class="label_name am-fl"> 收件人电话： </label>
+         							<div class="o_content">15447898745</div>
+            					</div>
+            					<div class="am-u-sm-12 am-u-md-12 am-u-lg-4">
+            						<label class="label_name am-fl"> 收件地址： </label>
+         							<div class="o_content">广东省深圳市福田区雨花台区郁金香软件大厦3懂3单元302室</div>
+            					</div>
+            				</div>
+            			</div>
+            		</div>
+            	</div>
+            	<div class="row">
+            		<div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
+            			<div class="widget am-cf">
+            				<div class="widget-head am-cf">
+	                            <div class="widget-title  am-cf">产品信息</div>
+	                        </div>
+            				<div class="widget-body am-fr">
+            					<div class="product-info am-cf am-fl">
+            						<a href="javascript:;" class="img_link am-fl"><img src="assets/img/comp_7.jpg" /></a>
+            						<div class="am-fl pro_text">
+            							<h5>F19S - 智能飞行电池</h5>
+            							<p>数量：3个</p>
+            							<p>价格：￥ 356</p>
+            						</div>
+            					</div>
+            					<div class="product-info am-cf am-fl">
+            						<a href="javascript:;" class="img_link am-fl"><img src="assets/img/comp_5.jpg" /></a>
+            						<div class="am-fl pro_text">
+            							<h5>F19S - 智能飞行电池</h5>
+            							<p>数量：2个</p>
+            							<p>价格：￥ 376</p>
+            						</div>
+            					</div>
+            					<div class="product-info am-cf am-fl">
+            						<a href="javascript:;" class="img_link am-fl"><img src="assets/img/comp_8.jpg" /></a>
+            						<div class="am-fl pro_text">
+            							<h5>F19S - 智能飞行电池</h5>
+            							<p>数量：1个</p>
+            							<p>价格：￥ 456</p>
+            						</div>
+            					</div>
+            				</div>
+            			</div>
+            		</div>
+            	</div>
+            	<div class="row">
+            		<div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
+            			<div class="widget am-cf">
+            				<div class="widget-body order-Consignee-info am-cf">
+            					<div class="am-u-sm-12 am-u-md-12 am-u-lg-3">
+            						<label class="am-fl"> 支付方式： </label>
+         							<div>在线支付</div>
+            					</div>
+            					<div class="am-u-sm-12 am-u-md-12 am-u-lg-3">
+            						<label class="am-fl"> 支付状态： </label>
+         							<div>待付款</div>
+            					</div>
+            					<div class="am-u-sm-12 am-u-md-12 am-u-lg-3">
+            						<label class="am-fl"> 快递名称： </label>
+         							<div>中通快递</div>
+            					</div>
+            					<div class="am-u-sm-12 am-u-md-12 am-u-lg-3">
+            						<label class="am-fl"> 订单生成日期： </label>
+         							<div>2017-07-06</div>
+            					</div>
+            					<div class="am-u-sm-12 am-u-md-12 am-u-lg-3">
+            						<label class="am-fl"> 发票信息： </label>
+         							<div>不需要发票</div>
+            					</div>
+            					<div class="am-u-sm-12 am-u-md-12 am-u-lg-3">
+            						<label class="am-fl"> 发货日期： </label>
+         							<div>2017-07-07</div>
+            					</div>
+            				</div>
+            				<div class="total_m_order">
+            					<div class="total_m">
+            						<span class="Total">商品总金额：<b>￥ 2276</b></span>
+            						<span class="Total_price">运费：<b>￥ 20</b></span>
+            						<span class="Total_price">总计：<b>￥ 2296</b></span>
+            					</div>
+            				</div>
+            			</div>
+            		</div>
+            	</div>
+            	<div class="row">
+            		<div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
+            			<div class="widget am-cf">
+            				<div class="widget-head am-cf">
+	                            <div class="widget-title  am-cf">物流信息</div>
+	                        </div>
+	                        <div class="widget-body am-fr">
+	                        	<!--<div class="prompt"><img src="images/meiyou.png" /><p>暂无物流信息！</p></div>-->
+	                        	<div data-mohe-type="kuaidi_new" class="g-mohe " id="mohe-kuaidi_new">
+							        <div id="mohe-kuaidi_new_nucom">
+							            <div class="mohe-wrap mh-wrap">
+							                <div class="mh-cont mh-list-wrap mh-unfold">
+							                    <div class="mh-list">
+							                        <ul>
+							                            <li class="first">
+							                                <p>2017-04-28 11:23:28</p>
+							                                <p>妥投投递并签收，签收人：他人收</p>
+							                                <span class="before"></span><span class="after"></span><i class="mh-icon mh-icon-new"></i></li>
+							                            <li>
+							                                <p>2017-04-28 07:38:44</p>
+							                                <p>深圳市南油速递营销部安排投递（投递员姓名：蔡远发;联系电话：<a href="tel:18718860573">18718860573</a>）</p>
+							                                <span class="before"></span><span class="after"></span></li>
+							                            <li>
+							                                <p>2017-04-28 05:08:00</p>
+							                                <p>到达广东省邮政速递物流有限公司深圳航空邮件处理中心处理中心（经转）</p>
+							                                <span class="before"></span><span class="after"></span></li>
+							                            <li>
+							                                <p>2017-04-28 00:00:00</p>
+							                                <p>离开中山市 发往深圳市（经转）</p>
+							                                <span class="before"></span><span class="after"></span></li>
+							                            <li>
+							                                <p>2017-04-27 15:00:00</p>
+							                                <p>到达广东省邮政速递物流有限公司中山三角邮件处理中心处理中心（经转）</p>
+							                                <span class="before"></span><span class="after"></span></li>
+							                            <li>
+							                                <p>2017-04-27 08:46:00</p>
+							                                <p>离开泉州市 发往中山市</p>
+							                                <span class="before"></span><span class="after"></span></li>
+							                            <li>
+							                                <p>2017-04-26 17:12:00</p>
+							                                <p>泉州市速递物流分公司南区电子商务业务部已收件，（揽投员姓名：王晨光;联系电话：<a href="tel:13774826403">13774826403</a>）</p>
+							                                <span class="before"></span><span class="after"></span></li>
+							                        </ul>
+							                    </div>
+							                </div>
+							            </div>
+							        </div>
+							    </div>
+	                        </div>
+	                   </div>
+	               </div>
+	            </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/amazeui.min.js"></script>
+    	<script src="assets/js/app.js"></script>
+	</body>
+</html>
