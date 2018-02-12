@@ -1,0 +1,76 @@
+body{
+	padding: 0;
+}
+.nav-header {
+    position: relative;
+}
+.section-banner{
+	position: relative;
+	width:100%;
+	height:1.86rem;
+	background-repeat: no-repeat;
+	background-position:center;
+	background-size:cover
+}
+.bann-caption{
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width:100%;
+	padding:.2rem .15rem;
+	text-align:center;
+	font-size:.22rem;
+	transform: translateY(-50%);
+}
+.sec-title{
+	font-size:.16rem;
+	line-height: .44rem;
+	margin-top:.15rem;
+	margin-bottom: .08rem;
+}
+.product-list li{
+	background-color:#FFFFFF;
+	padding:.1rem;
+	overflow: hidden;
+	margin-bottom:.1rem;
+}
+.product-list li .product-img{
+	float:left;
+	margin-right:.1rem;
+	width:.8rem;
+	height:.8rem;
+}
+.product-list li .product-img img{
+	width:100%;
+	height:100%
+}
+.product-list li .product-box{
+	padding:.1rem 0;
+	margin-left:.9rem;
+}
+.product-list li .product-box .name{
+	font-size:.14rem;
+	color: #333333;
+	height:.36rem;
+	line-height:.18rem;
+	overflow:hidden;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	text-overflow: ellipsis;
+	-webkit-line-clamp: 2;
+	
+}
+.product-list li .price{
+	margin-top:.04rem;
+	line-height:.2rem
+}
+.discount-price{
+	font-size:.14rem;
+	color:#16C09C
+}
+.section-accessories{
+	margin-bottom:.2rem;
+}
+.section-accessories .product-list li{
+	margin-bottom:1px;
+}

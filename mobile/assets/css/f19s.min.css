@@ -1,0 +1,180 @@
+body{padding:0;}
+.nav-header{position:relative}
+.section-index {
+    overflow: hidden;
+    background-image: -webkit-linear-gradient(top,#171717,#3c3c3c);
+    background-image: -o-linear-gradient(top,#171717,#3c3c3c);
+    background-image: -moz-linear-gradient(top,#171717,#3c3c3c);
+    background-image: linear-gradient(top,#171717,#3c3c3c);
+}
+.section-index .content {
+    text-align: center;
+    padding-top: .32rem;
+    color: #fff;
+}
+.section-index .title-top {
+    font-size: .26rem;
+    line-height: .4rem;
+}
+.section-index .small-title {
+    padding: .1rem 0 .19rem;
+    font-size: .16rem;
+}
+.section-index .des {
+    font-size: .12rem;
+}
+.section-index .price {
+    margin-top: .2rem;
+    color: #16c09c;
+    font-size: .2rem;
+}
+.section-index .img{margin-top:.42rem;}
+.section-index .img img {
+    width:100%;
+}
+.section-icons img{width:100%}
+.section-hero{
+	position:relative;
+	overflow: visible
+}
+.section-hero .content{
+	padding-top:.52rem;
+	color:#ffffff;
+}
+.section-hero .content .title-top{
+	font-size:.26rem;
+}
+.section-hero .content .small-title{
+	font-size:.16rem;
+}
+.section-hero .content .des{
+	margin-top:.32rem;
+	font-size:.12rem;
+	line-height: .24rem
+}
+.section-hero img,.section-detail img{
+	width:100%;
+}
+.section-detail{
+	position: relative;
+	width:100%;
+	background-color:#ffffff;
+	overflow:visible;
+	display:none;
+}
+.section-camera .section-hero{
+	background-color:#100f14;
+}
+.section-performance .section-hero {
+    background-color: #101010;
+}
+.section-safe .section-hero{
+	background-color:#101010;
+}
+.section-accessories img{
+	width:100%
+}
+.section-accessories{
+	position: relative;
+}
+.section-accessories .title-top{
+	position: absolute;
+	top:.4rem;
+	left:0;
+	width: 100%;
+	text-align: center;
+	color:#333333;
+	font-size:.26rem;
+}
+.btn-more {
+    visibility: visible;
+    cursor: pointer;
+}
+.btn-show {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    width: 100px;
+    margin-left: -50px;
+    opacity: .9;
+    z-index: 100;
+    display: block;
+}
+.more-tips {
+    color: #16c09c;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0 auto 8px;
+    transition-property: opacity,-webkit-transform,color;
+    transition-property: opacity,transform,color;
+    transition-duration: 1s,1s,.35s;
+    transition-timing-function: cubic-bezier(.6,0,.48,1);
+    transition-delay: 0s;
+}
+.more-trigger {
+    width: 34px;
+    height: 34px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.btn-show .more-trigger {
+    pointer-events: auto;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+.btn-more .more-icon, .btn-more .more-trigger, .more-icon svg {
+    transition: opacity,-webkit-transform 1s;
+    transition: opacity,transform 1s;
+}
+.more-icon {
+    background-color: #16c09c;
+    width: 34px;
+    height: 34px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.more-icon svg {
+    fill: #000000;
+    width: 14px;
+    height: 14px;
+}
+.btn-close {
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    left: 50%;
+    margin-left: -17px;
+    top: 30px;
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+}
+.btn-close .more-icon {
+    background-color: rgba(210,210,210,.8);
+}
+.btn-close .more-icon svg {
+    fill: #fff;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+.card-section{
+	width:100%;
+	position:relative;
+}
+.card-section.section-animating .btn-show .more-trigger{pointer-events:auto;-webkit-transform:translate3d(0,34px,0);transform:translate3d(0,34px,0)}
+.card-section.section-animating .btn-show .more-icon{background-color:rgba(210,210,210,.8)}
+.card-section.section-animating .btn-show .more-icon svg{fill:#fff;transform:rotate(45deg);-webkit-transform:rotate(45deg)}
+.card-section.section-animating .more-tips{-webkit-transform:translate3d(0,-40px,0);transform:translate3d(0,-40px,0);opacity:0}
+.card-section.section-opened .btn-show{opacity:0;visibility:hidden;pointer-events:none}
+.card-section.section-opened .btn-close{display:block;opacity:.99;pointer-events:auto}
+.transition-animating{z-index:100!important}

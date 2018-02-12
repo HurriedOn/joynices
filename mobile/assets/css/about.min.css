@@ -1,0 +1,28 @@
+.section-about {
+    padding: .52rem 0;
+}
+.section-about-banner {
+    width: 100%;
+    background: #fff
+}
+.brief {
+    text-align: center;
+}
+.brief h2 {
+    font-size:.28rem;
+}
+.brief h3 {
+    font-size: .16rem;
+    text-transform: uppercase;
+    margin-bottom: .1rem;
+}
+.brief .sep {
+    max-width: .8rem;
+    border: 2px solid #0d0d0d;
+    margin: .2rem auto .25rem;
+}
+.brief .concision {
+    font-size: .14rem;
+    line-height: .32rem;
+    text-align: left;
+}

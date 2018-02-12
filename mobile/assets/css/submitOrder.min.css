@@ -1,0 +1,49 @@
+.main {padding-bottom: .72rem;}
+.section{margin-top:.06rem;background-color:#fff}
+.section-address{border-top:3px solid transparent;
+-moz-border-image:url(../img/bd1.png) 8 0 8 round;
+-webkit-border-image:url(../img/bd1.png) 8 0 8 round;
+-o-border-image: url(../img/bd1.png) 8 0 8 round;
+border-image: url(../img/bd1.png) 8 0 8 round;
+}
+.section-address .identity{height: .4rem;border-bottom: 1px solid #eee;padding: 0 .15rem;line-height: .4rem;}
+.address-empty{height: .4rem;padding: 0 .15rem;line-height: .4rem;position:relative;}
+.address-empty:after{content: "";position:absolute;right:.15rem;top:50%;width: .1rem;height: .1rem;border-left: 1px solid #999999;border-top: 1px solid #999999;transform: translate3d(0,-50%,0) rotate(135deg);-webkit-transform: translate3d(0,-50%,0) rotate(135deg);}
+.section-address .identity .default {color: #16c09c;}
+.section-address .modify {font-size: .12rem;color: #bfbfbf;float: right;}
+.section-address .edit {padding: .18rem .12rem;font-size: .14rem;color: #999;}
+.section .section-title {font-size:.14rem;padding:.12rem .15rem 0 .15rem;}
+.section .section-body {padding:.15rem}
+.section-logistics .logistics-cont,.options-list{margin-left: -.06rem;}
+.section-logistics .logistics-cont li {float: left;padding:.1rem;border: 1px solid #e5e5e5;margin: 0 .06rem .05rem .06rem;color: #999;font-size: .12rem;line-height: .24rem;cursor: pointer;}
+.section-logistics .logistics-cont li.selected,.section-invoice .options-list li.selected {border-color:#16c09c;color:#16c09c;}
+.section-logistics .logistics-cont li .ship {width:1.2rem;height:.3rem;line-height:.3rem}
+.section-logistics .logistics-cont li .img{width:.3rem;height:.3rem;float: left;}
+.section-logistics .logistics-cont li .name {padding-left:.12rem;float:left}
+.section-logistics .logistics-cont li .cost {float: right;}
+.section-invoice .options-list li {width:1.44rem;height: .4rem;border: 1px solid #e5e5e5;text-align:center;line-height:.4rem;margin: 0 .06rem .05rem .06rem;color: #999;float: left;cursor: pointer;font-size:.12rem;}
+.ui-justify {display:box;display:-webkit-box;box-align:center;-webkit-box-align:center;box-pack: justify;-webkit-box-pack: justify;}
+.section-payment .pay-way li {font-size:.12rem;border-bottom:1px solid #eee;height: .54rem;}
+.section-payment .pay-way li img{width: .36rem;padding-right: .1rem;}
+.section-goods .goods-info li {font-size: .12rem;color: #666;display: box;display: -webkit-box;box-pack: center;-webkit-box-pack: center;box-align: center;-webkit-box-align: center;line-height: .24rem;padding: .05rem 0;border-bottom: 1px solid #eee;}
+.section-goods .goods-info li .img {margin-right: .12rem;}
+.section-goods .goods-info li .name {-webkit-box-flex:1;box-flex:1;margin-right: .3rem;}
+.section-goods .goods-info li img {width: .5rem;height: .5rem;}
+.sub-footer{position: fixed;bottom: 0;left: 0;width: 100%;background-color: #fff;box-shadow: 0 3px 14px 2px rgba(0,0,0,.12);z-index: 100}
+.sub-footer .info-tips{height:.28rem;font-size: .12rem;color: #fff;background-color: rgba(0,0,0,.6);padding: .05rem .15rem;line-height:.18rem;overflow:hidden;text-overflow: ellipsis;white-space: nowrap;}
+.sub-footer .deliver-bar .cart-total{float: left;color:#16c09c;width:50%;line-height: .44rem;text-align: center;}
+.sub-footer .deliver-bar .go-buy{width:50%;line-height: .44rem;font-size: .14rem;display: inline-block;float: left;text-align: center;border: none;}
+.inputlist{
+    padding-bottom: .1rem;
+    position: relative;
+}
+.inputlist input{
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: transparent;
+    line-height: .2rem;
+    padding: .1rem 0;
+    font-size: .14rem;
+    width: 100%;
+    display: block;
+}
