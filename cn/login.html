@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<title>登录-Joynices</title>
+	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+	<meta content="webkit" name="renderer" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta content="user-scalable=no,width=device-width,initial-scale=1,maximum-scale=1" name="viewport" />
+	<meta name="keywords" content="joynices,卓耐斯，无人机，航拍，飞行器，f19s，卓耐斯官网，卓耐斯商城，drone" />
+	<meta name="description" content="卓耐斯账号能享受更便捷的购买体验。" />
+	<link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.ico" />
+	<link rel="stylesheet" href="../assets/css/base.min.css" />
+	<link rel="stylesheet" href="../assets/css/login.min.css" />
+</head>
+<body>
+	<div class="warpbox">
+		<div class="layout">
+			<div class="lgheader row">
+				<div class="logo">
+					<a href="index.html"><img src="../assets/img/logo-black.svg" /></a>
+				</div>
+				<div class="sel-way">
+					<a href="tourist.html">游客登录</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="register.html">用户注册</a>
+				</div>
+			</div>
+			<h2 class="title">账号登录，</h2>
+			<p class="subtitle">登录帐号后，您将享受更便捷的购买体验</p>
+			<form id="J_mainForm">
+				<div class="sign-flow">
+					<div class="inputlist">
+				        <input type="text" name="userName" id="user" autocomplete="off" placeholder="邮箱/手机号码">
+			        </div>
+			        <div class="inputlist">
+				       <input type="password" name="password" id="pwd" autocomplete="off" placeholder="密码">
+			        </div>
+			        <div class="inputlist code">
+						<input type="text" name="icode" id="code-img" autocomplete="off" placeholder="图片验证码"><img src="../images/code/code1.jpg" title="看不清换一张" alt="图片验证码" class="chkcode-img">
+					</div>
+					<div class="btns-bg">
+						<button type="button" class="btn btn-primary" id="J_loginBtn">登录</button>
+					</div>
+					<div><a href="forgetPwd.html">忘记密码？</a></div>
+				</div>
+				<!-- 其他登录方式 s -->
+				<div class="other-login-type">
+					<fieldset class="oth-type-tit">
+						<legend align="center" class="oth-type-txt">其他方式登录</legend>
+					</fieldset>
+					<div class="ototh-type-links">
+						<a class="icon-type btn-qq" data-type="qq" href="" title="QQ登录"><i class="iconfont icon-qq"></i></a>
+						<a class="icon-type btn-weibo" data-type="weibo" href="association.html" title="微博登录"><i class="iconfont icon-weibo"></i></a>
+						<a class="icon-type btn-weixin" data-type="weixin" href="" title="微信登录"><i class="iconfont icon-weixin"></i></a>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<script type="text/javascript" src="../assets/js/base.min.js" ></script>
+	<script>
+		$(function(){
+			var userInput=$("#user"),
+				pwdInput=$("#pwd"),
+				codeInput=$("#code-img");
+			$("#J_loginBtn").on("click",function(){
+				var user=$.trim( userInput.val() ),
+			  		pwd=$.trim(pwdInput.val()),
+			  		code=$.trim(codeInput.val());
+			  	if(user==""){
+			  		showError(userInput,"请输入帐号");
+			    	return false;
+			  	}else if(pwd==""){
+			  		showError(pwdInput,"请输入密码");
+			    	return false;
+			  	}else if(code==""){
+			  		showError(codeInput,"请输入验证码");
+			    	return false;
+			  	}
+			  	//console.log("user:"+user,"pwd:"+pwd,"code:"+code)
+			});
+			function showError(type,text){
+				var errors="<p class='error'>"+text+"</p>",
+					p=type.closest(".inputlist");
+				p.find(".error").remove(),p.append(errors);
+				type.on("keydown",function(){
+			    	p.find(".error").remove()
+			    });
+			}	
+		})
+	</script>
+</body>
+</html>
