@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+	<title>自助寄修-卓耐斯</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1200">
+	<link rel="shortcut icon" href="../assets/img/favicon.ico" />
+	<link rel="stylesheet" href="../assets/css/base.mim.css?v=20180103" />
+	<style>
+		body{background-color:#f7f8f9}
+		.repair-warp{margin:40px 0 70px;background-color: #fff;padding:60px;}
+		.repair-tit{font-size: 30px;padding-bottom:35px;}
+		.section-summary{padding:50px 0 30px 0;border-bottom: 1px solid #E0E0E0;}
+		.section-summary .summ-status{font-size: 20px;margin-bottom: 15px;}
+		.section-summary .summ-cont{margin-left:40px;}
+		.pro-list li{text-align: center;float: left;margin-right:20px;margin-bottom:15px;cursor:pointer}
+		.pro-list li .img{width:124px;height:124px;border:1px solid #e2e2e2}
+		.pro-list li .img img{width:100%;height:100%;}
+		.pro-list li p{margin-top:10px;font-size:14px;}
+		.section-summary{margin-bottom:22px;font-size:16px;}
+		.summ-cont .col{padding-left: 15px;width: 130px;float: left;}
+		.problem-warp .prob-tit{margin-bottom:15px;}
+		.problem-warp .prob-list li{float:left;border:1px solid #e0e0e0;line-height:40px;padding:0 10px;margin-right:15px;margin-bottom:20px;cursor: pointer;}
+		.problem-warp textarea{width:100%;padding:6px;border:1px solid #e0e0e0;}
+		.birthday-box{margin-bottom:20px;}
+		.birthday-box li{float:left;margin-right:27px;position:relative;cursor:pointer}
+		.birthday-box .selected{position:relative;display:inline-block}
+		.birthday-box .selected input.birthcon {width: 140px;max-height: 40px;border: 1px solid #e0e0e0;font-size: 16px;line-height: 1;background-color: #fff;padding: 10px 16px;cursor: pointer;}
+		.birthday-box .selected .iconfont {font-size: 20px;color: #999;position: absolute;right: 16px;top: 10px;}
+		.birthday-box .select_list{border:1px solid #e0e0e0;border-radius:4px;background-color:#fff;width:100%;height:140px;overflow-x:hidden;overflow-y:auto;position:absolute;left:0;top:39px;z-index:98;display:none}
+		.birthday-box .select_list p{padding-left:16px;line-height:26px;font-size:14px;}
+		.uplode-img{position:relative;}
+		.uplode-img .btn-uploade{width:150px;height:40px;background-color:#fff;border:1px dashed #E0E0E0;}
+		.uplode-img .btn-file{position:absolute;top:0;left:0;width:150px;height:40px;opacity:0;filter: alpha(opacity=0);cursor: pointer;}
+		.uplode-img .file-name{position: absolute;top: 0;left:190px;line-height:40px;}
+		.uplode-img .file-name i{font-size:16px;vertical-align: middle;color: #16C09C;padding-right:6px;}
+		.summ-cont .tips{margin-top:30px;font-size:14px;color:#16C09C;}
+		.pro-list li.active .img,.pro-list li:hover .img,.problem-warp .prob-list li.active,.problem-warp .prob-list li:hover,.uplode-img .btn-uploade:hover{
+			border-color: #16C09C;
+		}
+		.send-addr{background-color:#F7F8F9;padding:20px;font-size:14px;margin-bottom:20px;}
+		.send-addr .row{padding:12px 0;border-bottom:1px solid #ececec;}
+		.send-addr .row:last-child{border: none;}
+		.col-send{float:left;width:120px;color: #999;}
+		.express-input input{border:1px solid #E0E0E0;line-height:40px;height:40px;font-size:14px;padding: 10px 16px;margin-right:16px;width:300px;}
+		.next-box{text-align:right;}
+		.modal-body{width:600px;padding-left:0;}
+		.modal-body .form-section .distpicker .city-picker-input{width:538px;border:none;padding:0;height:auto}
+		.city-picker-input{opacity:0!important;top:-9999px;left:-9999px;position:absolute}.city-picker-span{position:relative;display:block;outline:0;-webkit-tap-highlight-color:rgba(0,0,0,0);background-color:#fff;color:#ccc;cursor:pointer}.city-picker-span>.placeholder{color:#aaa}.city-picker-span>.arrow{position:absolute;top:50%;right:8px;margin-top:-8px;font-size:14px;line-height:18px}.city-picker-span.focus,.city-picker-span.open{border-bottom-color:#46a4ff}.city-picker-span.open>.arrow{transform:rotateX(180deg)}.city-picker-span>.title>span{color:#666;padding:5px;border-radius:3px}.city-picker-span>.title>span:hover{background-color:#f1f8ff}.city-picker-dropdown{position:absolute;width:416px;left:-9999px;top:-9999px;outline:0;-webkit-tap-highlight-color:rgba(0,0,0,0);z-index:999999;display:none;min-width:330px;margin-bottom:20px}.city-select-wrap{box-shadow:0 1px 5px rgba(0,0,0,.5)}.city-select-tab{border-bottom:1px solid #ccc;background:#f0f0f0;font-size:13px}.city-select-tab>a{display:inline-block;padding:8px 22px;border-left:1px solid #ccc;border-bottom:1px solid transparent;color:#4d4d4d;text-align:center;outline:0;text-decoration:none;cursor:pointer;font-size:14px;margin-bottom:-1px}.city-select-tab>a.active{background:#fff;border-bottom:1px solid #fff;color:#16c09c}.city-select-tab>a:first-child{border-left:none}.city-select-tab>a:last-child.active{border-right:1px solid #ccc}.city-select-content{min-height:10px;background-color:#fff;padding:10px 15px}.city-select{font-size:13px}.city-select dl{line-height:2;clear:both;padding:3px 0;margin:0}.city-select dt{position:absolute;width:2.5em;font-weight:500;text-align:right;line-height:2}.city-select dd{margin-left:0;line-height:2}.city-select.province dd{margin-left:3em}.city-select a{display:inline-block;padding:0 10px;outline:0;text-decoration:none;white-space:nowrap;margin-right:2px;text-decoration:none;color:#333;cursor:pointer}.city-select a:focus,.city-select a:hover{background-color:#eefdfa;border-radius:2px;color:#16c09c}.city-select a.active{background-color:#16c09c;color:#fff;border-radius:2px}
+	</style>
+</head>
+<body>
+	<header>
+		<nav class="navbar">
+	        <div class="container">
+	            <div class="navbar-header">
+	                <a class="navbar-brand" href="index.html">
+	                    <img src="../assets/img/logo-white.png" class="img-responsive" alt="logo">
+	                </a>
+	            </div>
+	            <div class="navbar-collapse">
+	                <div class="nav-wrap">
+	                    <ul class="nav">
+	                        <li><a href="about.html">关于我们</a></li>
+                            <li><a href="server.html">服务与支持</a></li>
+                            <li><a href="news.html">新闻资讯</a></li>
+                            <li><a href="contact.html">联系我们</a></li>
+	                    </ul>
+	                </div>
+	                <div class="nav-media">
+	                    <ul class="nav">
+	                    	<li><a href="f19s.html">F19S</a></li>
+	                        <li><a href="goggles.html">VR眼镜</a></li>
+	                        <li class="nav-car">
+	                        	<a href="cart.html"><i class="iconfont icon-cart"></i></a>
+								<span class="cart_count">3</span>
+								<div class="cart_menu">
+									<div class="cart-list">
+				            			<ul class="cart-inven">
+				            				<li><a href="index.html">
+			            						<img src="../images/product/f19s-dc1!60x60.jpg">
+			            						<div class="text">
+			            							<div class="name">F19S 智能飞行电池</div>
+			            							<div class="cost">¥299 x 2</div>
+			            						</div>
+			            					</a></li>
+			            					<li><a href="index.html">
+			            						<img src="../images/product/f19s-angle2!60x60.jpg">
+			            						<div class="text">
+			            							<div class="name">F19S （初雪白）</div>
+			            							<div class="cost">¥6499 x 1</div>
+			            						</div>
+			            					</a></li>
+				            			</ul>
+				            			<div class="meta row">
+				            				<div class="cart-total">
+				            					<div class="total-qty">共 3 件商品</div>
+				            					<div class="total-price">合计：<span>¥7097</span></div>
+				            				</div>
+				            				<a href="cart.html" class="account">去结算</a>
+				            			</div>
+				            		</div>
+				            	</div>
+	                        </li>
+	                        <li>
+	                        	<a href="portal.html"><i class="iconfont icon-user"></i></a>
+								<ul class="submenu nav-user">
+									<li><a href="portal.html">个人中心</a></li>
+									<li><a href="order.html">我的订单</a></li>
+									<li><a href="login.html">退出登录</a></li>
+								</ul>
+	                        </li>
+	                        <li><a href="index.html">中文</a>
+								<ul class="nav-lang submenu">
+									<li>
+										<a href="index.html">中文</a>
+									</li>
+									<li>
+										<a href="../index.html">English</a>
+									</li>
+									<li>
+										<a href="index.html">日本語</a>
+									</li>
+								</ul>
+	                        </li>
+	                    </ul>
+	                </div>
+	            </div>
+	        </div>
+	    </nav>
+	</header>
+	<div class="main">
+		<div class="container">
+			<div class="repair-warp">
+				<h3 class="repair-tit">自动寄修</h3>
+				<div class="repair-con">
+					<div class="section-summary">
+						<div class="summ-status">选择寄修设备</div>
+						<div class="summ-cont">
+							<ul class="row pro-list">
+								<li class="active">
+									<div class="img">
+										<img src="../images/product/f19s-angle2!460x460.jpg" />
+									</div>
+									<p>F19S</p>
+								</li>
+								<li>
+									<div class="img">
+										<img src="../images/product/goggles-angle1!460x460.jpg" />
+									</div>
+									<p>飞行眼镜</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="section-summary">
+						<div class="summ-status">请选择服务类型</div>
+						<div class="summ-cont">
+							<div class="row">
+								<div class="col">
+									<label class="radio-inline"><input class="inlineRadio1 iconfont" name="sex" type="radio" value="0" checked="">维修</label>
+								</div>
+								<div class="col">
+									<label class="radio-inline"><input class="inlineRadio1 iconfont" name="sex" type="radio" value="1">换货</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="section-summary">
+						<div class="summ-status">您的设备遇到的问题</div>
+						<div class="summ-cont">
+							<div class="problem-warp" id="J_option">
+								<div class="prob-tit">硬件故障</div>
+								<ul class="prob-list row">
+									<li>碰撞损坏</li><li>飞行器落水</li><li>云台相机功能异常</li><li>遥控器异常</li><li>划痕、裂纹</li><li>指南针或IMU功能异常</li><li>下视和超声波系统异常</li><li>电池故障</li><li>视觉系统异常</li><li>动力问题</li>
+								</ul>
+								<div class="prob-tit">软件及其他</div>
+								<ul class="prob-list row">
+									<li>固件升级失败</li><li>配件故障</li><li>激活问题</li><li>智能飞行问题</li><li>其他</li>
+								</ul>
+								<div class="prob-tit">详细的问题描述可以帮助我们更快定位您的问题，缩短处理时间：</div>
+								<div class="inputlist">
+									<textarea rows="5" autocomplete="off" placeholder="没有合适的描述？请手动输入您所遇到的故障"></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="section-summary">
+						<div class="summ-status">购买凭证及购买日期</div>
+						<div class="summ-cont">
+							<div class="problem-warp">
+								<div class="prob-tit">购买日期</div>
+								<ul class="birthday-box row">
+									<li class="biry">
+										<div class="selected J_selDay">
+											<input class="birthcon" type="text" _code="中国" readonly="readonly" value="年" />
+											<i class="iconfont icon-down" ></i>
+										</div>
+										<div class="select_list select-year"></div>
+									</li>
+									<li class="birm">
+										<div class="selected J_selDay">
+											<input class="birthcon" type="text" _code="中国" readonly="readonly" value="月" />
+											<i class="iconfont icon-down" ></i>
+										</div>
+										<div class="select_list select-month">
+											<div class="select_panel">
+							                  <p value="01">1</p>
+							                  <p value="02">2</p>
+							                  <p value="03">3</p>
+							                  <p value="04">4</p>
+							                  <p value="05">5</p>
+							                  <p value="06">6</p>
+							                  <p value="07">7</p>
+							                  <p value="08">8</p>
+							                  <p value="09">9</p>
+							                  <p value="10">10</p>
+							                  <p value="11">11</p>
+							                  <p value="12">12</p>
+							                </div>
+										</div>
+									</li>
+									<li class="bird">
+										<div class="selected J_selDay">
+											<input class="birthcon" type="text" _code="中国" readonly="readonly" value="日" />
+											<i class="iconfont icon-down" ></i>
+										</div>
+										<div class="select_list select-date">
+											<div class="select_panel">
+							                  <p value="01">1</p>
+							                  <p value="02">2</p>
+							                  <p value="03">3</p>
+							                  <p value="04">4</p>
+							                  <p value="05">5</p>
+							                  <p value="06">6</p>
+							                  <p value="07">7</p>
+							                  <p value="08">8</p>
+							                  <p value="09">9</p>
+							                  <p value="10">10</p>
+							                  <p value="11">11</p>
+							                  <p value="12">12</p>
+							                  <p value="13">13</p>
+							                  <p value="14">14</p>
+							                  <p value="15">15</p>
+							                  <p value="16">16</p>
+							                  <p value="17">17</p>
+							                  <p value="18">18</p>
+							                  <p value="19">19</p>
+							                  <p value="20">20</p>
+							                  <p value="21">21</p>
+							                  <p value="22">22</p>
+							                  <p value="23">23</p>
+							                  <p value="24">24</p>
+							                  <p value="25">25</p>
+							                  <p value="26">26</p>
+							                  <p value="27">27</p>
+							                  <p value="28">28</p>
+							                  <p value="29">29</p>
+							                  <p value="30">30</p>
+							                  <p value="31">31</p>
+							                </div>
+										</div>
+									</li>
+								</ul>
+								<div class="prob-tit">购买凭证</div>
+								<div class="uplode-img" id="J_uplode">
+									<input class="btn-uploade" type="button" onclick="return false;" value="上传购买凭证">
+									<input class="btn-file" id="file" name="file" type="file" autocomplete="off" disableautocomplete="">
+								</div>
+								<div class="tips">
+									<p>购买凭证支持数据格式为 PDF, JPG 或 PNG，文件大小需小于1MB。</p>
+									<p>如您购买自卓耐斯官网、天猫或京东旗舰店，购买凭证可以是订单页截图或照片。截图必须包含订单号、签收时间和商品明细。</p>
+									<p>如您购买自其他渠道，需上传正规购买发票。</p>
+									<p>若寄回的产品无法查验激活信息，且未上传购买发票，我们有权拒绝您的免费维修或换货请求。</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="section-summary">
+						<div class="summ-status">寄回地址信息</div>
+						<div class="summ-cont">
+							<div class="problem-warp">
+								<div class="prob-tit">寄回地址</div>
+								<div class="send-addr">
+									<div class="row">
+										<div class="col-send">收件地址</div>
+										<div class="pull-left">深圳市高新南七道数字技术园A3栋C3</div>
+									</div>
+									<div class="row">
+										<div class="col-send">收件人</div>
+										<div class="pull-left">婷婷</div>
+									</div>
+									<div class="row">
+										<div class="col-send">联系电话</div>
+										<div class="pull-left">0755-00000000</div>
+									</div>
+								</div>
+								<div class="prob-tit">请填写快递信息</div>
+								<div class="express-input">
+									<input type="text" placeholder="快递公司" />
+									<input type="text" placeholder="物流单号" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="section-summary">
+						<div class="summ-status">您的收货地址</div>
+						<div class="summ-cont">
+							<div class="modal-body">
+							    <div class="form-group row">
+							    	<fieldset class="form-section">
+										<label class="input-label" for="J_consigneeInput">收货人姓名</label>
+										<input class="input-text J_addressText" type="text" id="J_consigneeInput" name="consignee" placeholder="收货人姓名" autocomplete="off" />
+									</fieldset>
+									<fieldset class="form-section">
+										<label class="input-label" for="J_telephoneInput">联系电话</label>
+										<input class="input-text J_addressText" type="text" id="J_telephoneInput" name="phone" placeholder="11位手机号（必填）" autocomplete="off" />
+									</fieldset>
+									<fieldset class="form-section">
+										<label class="input-label" for="city-picker3">收货地址</label>
+										<div class="distpicker J_addressText" name="three_address" style="position: relative;" >
+											<input id="city-picker3" class="input-text" type="text" data-toggle="city-picker" readonly />
+										</div>
+									</fieldset>
+									<fieldset class="form-section">
+										<label class="input-label" for="J_detailInput">详细地址</label>
+										<textarea class="input-text J_addressText" name="user_adress" id="J_detailInput" placeholder="路名或街道地址，门牌号"></textarea>
+									</fieldset>
+									<fieldset class="form-section">
+										<label class="input-label" for="J_zipcodeInput">邮政编码</label>
+										<input class="input-text J_addressText" type="text" name="user_zipcode" id="J_zipcodeInput"  placeholder="必填" autocomplete="off" />
+									</fieldset>
+							    </div>
+							</div>
+						</div>
+					</div>
+					<div class="next-box">
+						<button class="btn btn-primary btn-mid">提交</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="footer-serve">
+			<div class="container">
+				<ul class="row">
+					<li>
+						<i class="iconfont icon-truck"></i>
+						<span>全场满¥99顺丰包邮（顺丰无法配送的区域将使用EMS）</span>
+					</li>
+					<li>
+						<i class="iconfont icon-card"></i>
+						<span>支持支付宝、微信、银联、转账付款、顺丰到付</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="footer-nav">
+			<div class="container">
+				<div class="footer-link row">
+					<dl class="col-links">
+						<dt>选购了解</dt>
+						<dd><a href="f19s.html">F19S</a></dd>
+						<dd><a href="goggles.html">VR眼镜</a></dd>
+					</dl>
+					<dl class="col-links">
+						<dt>帮助中心</dt>
+						<dd><a href="portal.html">账号管理</a></dd>
+						<dd><a href="guide.html">购物指南</a></dd>
+						<dd><a href="guide.html">订单操作</a></dd>
+					</dl>
+					<dl class="col-links">
+						<dt>服务支持</dt>
+						<dd><a href="policy.html">售后服务</a></dd>
+						<dd><a href="repair.html">自动寄修</a></dd>
+						<dd><a href="repair.html">维修服务</a></dd>
+					</dl>
+					<dl class="col-links">
+						<dt>关于卓耐斯</dt>
+						<dd><a href="about">关于我们</a></dd>
+						<dd><a href="contact.html">联系我们</a></dd>
+						<dd><a href="contact.html">加入我们</a></dd>
+					</dl>
+					<dl class="col-contact">
+						<p class="phone">400-000-0000</p>
+						<p class="time">周一至周日 9:00-18:30<br>（仅收市话费）</p>
+						<a class="btn btn-phone btn-sm" href="javascript:void(0);"><i class="iconfont icon-phone"></i>24小时在线服务</a>
+					</dl>
+				</div>
+			</div>
+		</div>
+		<div class="footer-site">
+			<div class="container">
+				<div class="row">
+					<div class="pull-left">
+						<div class="legal">
+							<div class="copyright">Copyright © 2017 Joynices 卓耐斯   保留所有权利。</div>
+							<div class="legal_link">
+								<a href="privacy.html">隐私政策</a><span>|</span><a href="legal.html">法律声明</a><span>|</span><a href="sitemap.html">网站地图</a>
+							</div>
+						</div>
+						<p class="record">京公安网安备 00000000000000</p>
+					</div>
+					<div class="pull-right">
+						<div class="social">
+			                <a href="#"><i class="iconfont icon-facebook"></i></a>
+			                <a href="#"><i class="iconfont icon-twitter"></i></a>
+			                <a href="#"><i class="iconfont icon-weibo"></i></a>
+			                <a href="#"><i class="iconfont icon-weixin"></i></a>
+			            </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script type="text/javascript" src="../assets/js/base.min.js?v=20180103"></script>
+	<script type="text/javascript" src="../assets/js/city-data.min.js?v=20180103" ></script>
+	<script type="text/javascript" src="../scripts/repair.js?v=20180103" ></script>
+</body>
+</html>

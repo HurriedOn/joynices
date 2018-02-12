@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+	<title>个人信息</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=1200" />
+	<link rel="shortcut icon" href="../assets/img/favicon.ico" />
+	<link rel="stylesheet" href="../assets/css/base.mim.css?v=20180103" />
+	<link rel="stylesheet" href="../styles/portal.min.css?v=20180103" />
+</head>
+<body>
+	<header>
+		<nav class="navbar">
+	        <div class="container">
+	            <div class="navbar-header">
+	                <a class="navbar-brand" href="index.html">
+	                    <img src="../assets/img/logo-white.png" class="img-responsive" alt="logo">
+	                </a>
+	            </div>
+	            <div class="navbar-collapse">
+	                <div class="nav-wrap">
+	                    <ul class="nav">
+	                        <li><a href="about.html">关于我们</a></li>
+                            <li><a href="server.html">服务与支持</a></li>
+                            <li><a href="news.html">新闻资讯</a></li>
+                            <li><a href="contact.html">联系我们</a></li>
+	                    </ul>
+	                </div>
+	                <div class="nav-media">
+	                    <ul class="nav">
+	                    	<li><a href="f19s.html">F19S</a></li>
+	                        <li><a href="goggles.html">VR眼镜</a></li>
+	                        <li class="nav-car"><a href="cart.html"><i class="iconfont icon-cart"></i></a>
+								<span class="cart_count">0</span>
+								<div class="cart_menu">
+									<div class="cart-list">
+										<div class="no-data">购物车中还没有商品，赶紧选购吧！</div>
+				            		</div>
+				            	</div>
+	                        </li>
+	                        <li><a href="portal.html"><i class="iconfont icon-user"></i></a>
+								<ul class="submenu nav-user">
+									<li><a href="portal.html">个人中心</a></li>
+									<li><a href="order.html">我的订单</a></li>
+									<li><a href="login.html">退出登录</a></li>
+								</ul>
+	                        </li>
+	                        <li><a href="index.html">中文</a>
+								<ul class="nav-lang submenu">
+									<li>
+										<a href="index.html">中文</a>
+									</li>
+									<li>
+										<a href="../index.html">English</a>
+									</li>
+									<li>
+										<a href="index.html">日本語</a>
+									</li>
+								</ul>
+	                        </li>
+	                    </ul>
+	                </div>
+	            </div>
+	        </div>
+	    </nav>
+	</header>
+	<div class="main">
+		<div class="container">
+			<div class="row warp">
+				<div class="center_nav">
+					<div class="nav_box">
+						<ul>
+							<li><a href="portal.html">个人中心</a></li>
+							<li><a href="order.html">我的订单</a></li>
+							<li><a href="address.html">收货地址</a></li>
+							<li class="active"><a href="profile.html">个人信息</a></li>
+						</ul>
+					</div>
+				</div>
+				<!---->
+				<div class="center_warp">
+					<h3 class="center-title">个人信息</h3>
+					<div class="more_nav"></div>
+					<div class="profile_main">
+						<div class="first_group row">
+							<img src="../assets/img/photo.jpg" class="profile-pic">
+							<div class="profile_text">
+								<p class="setpic">设置头像</p>
+								<div class="uplode_img">
+									<input type="button" onclick="return false;" class="btn_commom" value="上传头像">
+									<input class="uplodefile" name="userfile" type="file" autocomplete="off" disableautocomplete="">
+								</div>
+								<p class="tip">格式为jpg或png，大小不超过2M</p>
+							</div>
+						</div>
+						<div class="col">
+							<div class="control_head"><i class="iconfont icon-user"></i>昵称</div>
+							<div class="control">
+								<input type="text" value="姬月" />
+							</div>
+						</div>
+						<div class="col">
+							<div class="control_head"><i class="iconfont icon-sex"></i>性别</div>
+							<div class="control tm-clear">
+								<div class="col-sex">
+									<label class="radio-inline"><input class="inlineRadio1 iconfont" id="user_gender_0" name="sex" type="radio" value="0" checked="" />男</label>
+								</div>
+								<div class="col-sex">
+									<label class="radio-inline"><input class="inlineRadio1 iconfont" id="user_gender_1" name="sex" type="radio" value="1"/>女</label>
+								</div>
+								<div class="col-sex">
+									<label class="radio-inline"><input class="inlineRadio1 iconfont" id="user_gender_2" name="sex" type="radio" value="2"/>保密</label>
+								</div>
+							</div>
+						</div>
+						<div class="col pro_area">
+							<div class="control_head"><i class="iconfont icon-address"></i>地区</div>
+							<div class="control">
+								<div class="countrybox">
+									<div class="selected" id="country-city">
+										<input class="J_code" type="text" _code="中国" readonly="readonly" value="中国" />
+										<i class="iconfont icon-down" ></i>
+									</div>
+									<div class="country-container-panel"></div>
+								</div>
+							</div>
+						</div>
+						<div class="col end_group">
+							<div class="control_head"><i class="iconfont icon-birthday"></i>生日</div>
+							<div class="control">
+								<ul class="birthday-box row">
+									<li class="biry">
+										<div class="selected J_selDay">
+											<input class="birthcon" type="text" _code="中国" readonly="readonly" value="年" />
+											<i class="iconfont icon-down" ></i>
+										</div>
+										<div class="select_list select-year"></div>
+									</li>
+									<li class="birm">
+										<div class="selected J_selDay">
+											<input class="birthcon" type="text" _code="中国" readonly="readonly" value="月" />
+											<i class="iconfont icon-down" ></i>
+										</div>
+										<div class="select_list select-month">
+											<div class="select_panel">
+							                  <p value="01">1</p>
+							                  <p value="02">2</p>
+							                  <p value="03">3</p>
+							                  <p value="04">4</p>
+							                  <p value="05">5</p>
+							                  <p value="06">6</p>
+							                  <p value="07">7</p>
+							                  <p value="08">8</p>
+							                  <p value="09">9</p>
+							                  <p value="10">10</p>
+							                  <p value="11">11</p>
+							                  <p value="12">12</p>
+							                </div>
+										</div>
+									</li>
+									<li class="bird">
+										<div class="selected J_selDay">
+											<input class="birthcon" type="text" _code="中国" readonly="readonly" value="日" />
+											<i class="iconfont icon-down" ></i>
+										</div>
+										<div class="select_list select-date">
+											<div class="select_panel">
+							                  <p value="01">1</p>
+							                  <p value="02">2</p>
+							                  <p value="03">3</p>
+							                  <p value="04">4</p>
+							                  <p value="05">5</p>
+							                  <p value="06">6</p>
+							                  <p value="07">7</p>
+							                  <p value="08">8</p>
+							                  <p value="09">9</p>
+							                  <p value="10">10</p>
+							                  <p value="11">11</p>
+							                  <p value="12">12</p>
+							                  <p value="13">13</p>
+							                  <p value="14">14</p>
+							                  <p value="15">15</p>
+							                  <p value="16">16</p>
+							                  <p value="17">17</p>
+							                  <p value="18">18</p>
+							                  <p value="19">19</p>
+							                  <p value="20">20</p>
+							                  <p value="21">21</p>
+							                  <p value="22">22</p>
+							                  <p value="23">23</p>
+							                  <p value="24">24</p>
+							                  <p value="25">25</p>
+							                  <p value="26">26</p>
+							                  <p value="27">27</p>
+							                  <p value="28">28</p>
+							                  <p value="29">29</p>
+							                  <p value="30">30</p>
+							                  <p value="31">31</p>
+							                </div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-btn">
+							<button class="btn btn-mid btn-primary">保存</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="footer-serve">
+			<div class="container">
+				<ul class="row">
+					<li>
+						<i class="iconfont icon-truck"></i>
+						<span>全场满¥99顺丰包邮（顺丰无法配送的区域将使用EMS）</span>
+					</li>
+					<li>
+						<i class="iconfont icon-card"></i>
+						<span>支持支付宝、微信、银联、转账付款、顺丰到付</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="footer-nav">
+			<div class="container">
+				<div class="footer-link row">
+					<dl class="col-links">
+						<dt>选购了解</dt>
+						<dd><a href="f19s.html">F19S</a></dd>
+						<dd><a href="goggles.html">VR眼镜</a></dd>
+					</dl>
+					<dl class="col-links">
+						<dt>帮助中心</dt>
+						<dd><a href="portal.html">账号管理</a></dd>
+						<dd><a href="guide.html">购物指南</a></dd>
+						<dd><a href="guide.html">订单操作</a></dd>
+					</dl>
+					<dl class="col-links">
+						<dt>服务支持</dt>
+						<dd><a href="policy.html">售后服务</a></dd>
+						<dd><a href="repair.html">自动寄修</a></dd>
+						<dd><a href="repair.html">维修服务</a></dd>
+					</dl>
+					<dl class="col-links">
+						<dt>关于卓耐斯</dt>
+						<dd><a href="about">关于我们</a></dd>
+						<dd><a href="contact.html">联系我们</a></dd>
+						<dd><a href="contact.html">加入我们</a></dd>
+					</dl>
+					<dl class="col-contact">
+						<p class="phone">400-000-0000</p>
+						<p class="time">周一至周日 9:00-18:30<br>（仅收市话费）</p>
+						<a class="btn btn-phone btn-sm" href="javascript:void(0);"><i class="iconfont icon-phone"></i>24小时在线服务</a>
+					</dl>
+				</div>
+			</div>
+		</div>
+		<div class="footer-site">
+			<div class="container">
+				<div class="row">
+					<div class="pull-left">
+						<div class="legal">
+							<div class="copyright">Copyright © 2017 Joynices 卓耐斯   保留所有权利。</div>
+							<div class="legal_link">
+								<a href="privacy.html">隐私政策</a><span>|</span><a href="legal.html">法律声明</a><span>|</span><a href="sitemap.html">网站地图</a>
+							</div>
+						</div>
+						<p class="record">京公安网安备 00000000000000</p>
+					</div>
+					<div class="pull-right">
+						<div class="social">
+			                <a href="#"><i class="iconfont icon-facebook"></i></a>
+			                <a href="#"><i class="iconfont icon-twitter"></i></a>
+			                <a href="#"><i class="iconfont icon-weibo"></i></a>
+			                <a href="#"><i class="iconfont icon-weixin"></i></a>
+			            </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script type="text/javascript" src="../assets/js/base.min.js?v=20180103"></script>
+	<script type="text/javascript" src="../scripts/profile.js?v=20180103"></script>
+</body>
+</html>

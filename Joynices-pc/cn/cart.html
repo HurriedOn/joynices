@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title>我的购物车-卓耐斯商城</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1200" />
+	<link rel="shortcut icon" href="../assets/img/favicon.ico" />
+	<link rel="stylesheet" href="../assets/css/base.mim.css?v=20180103" />
+	<link rel="stylesheet" type="text/css" href="../styles/cart.min.css?v=20180103">
+</head>
+<body>
+	<div class="site-header">
+		<div class="container">
+			<a class="site-logo" href="index.html">
+				<img src="../assets/img/logo-black.png" class="img-responsive" alt="logo">
+			</a>
+			<div class="site-title">
+				<h2>我的购物车</h2><p>温馨提示：产品是否购买成功，以最终下单为准哦，请尽快结算</p>
+			</div>
+			<div class="site-user navbar-collapse">
+				<!--未登录时-->
+				<a class="link" href="login.html">登录/注册</a>
+				<!--登录时-->
+				<!--<ul class="nav">
+					<li>
+	                	<a class="link" href="portal.html"><i class="iconfont icon-user"></i></a>
+						<ul class="submenu nav-user">
+							<li><a href="portal.html">个人中心</a></li>
+							<li><a href="order.html">我的订单</a></li>
+							<li><a href="login.html">退出登录</a></li>
+						</ul>
+					</li>
+	            </ul>-->
+			</div>
+		</div>		
+	</div>
+	<div class="cart-main">
+		<div class="container">
+			<!--加载-->
+			<div class="loading cart-loading" id="J_cartLoading">
+				<i class="iconfont icon-loading iconfont-spin"></i>
+			</div>
+			<!--购物车为空-->
+			<div class="cart-empty hide" id="J_cartEmpty">
+				<div class="empty-img"><img src="../assets/img/no-more.png" /></div>
+				<div class="empty-cont">
+					<h2>您的购物车空空如也！</h2>
+					<p class="login-desc">登录后可显示您账号中已加入的商品哦~</p>
+	            	<a href="login.html" class="btn btn-mid btn-primary btn-login">立即登录</a>
+					<a class="btn btn-mid btn-shop" href="index.html">继续购物</a>
+				</div>
+			</div>
+			<div class="cartBox hide" id="J_cartBox">
+				<div class="cart-table">
+					<div class="row cart-thead">
+			            <div class="cart-tr tr-check">
+			            	<i class="iconfont icon-checkbox0 checkbox" id="J_checkAll"></i>全选
+			            </div>
+			            <div class="cart-tr tr-img">&nbsp;</div>
+			            <div class="cart-tr tr-name">商品名称</div>
+			            <div class="cart-tr tr-price">单价</div>
+			            <div class="cart-tr tr-num">数量</div>
+			            <div class="cart-tr tr-total">小计</div>
+			            <div class="cart-tr tr-action">操作</div>
+			        </div>
+			        <div class="cart-tbody" id="J_cartListBody"></div>
+				</div>
+				<div class="cart-bar row">
+					<div class="pull-left">
+						<span class="cart-total">共 <i id="J_cartTotalNum"></i> 件商品&nbsp;选中 <i id="J_selTotalNum"></i> 件</span>
+					</div>
+					<span class="total-price">合计（不含运费）： 
+						<span class="total-price_num">¥ <span id="J_cartTotalPrice">00.00</span>
+					</span>
+				</div>
+				<div class="deliver-bar row">
+					<span class="deliver_time">发货时间：预计订单付款后1-3个工作日</span>
+					<div class="pull-right">
+						<a class="btn btn-mid btn-shop" href="accessories.html">继续购物</a>
+						<a id="J_goBuy" class="btn btn-mid btn-primary go_submit" href="javascript:void(0);">去结算</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--模板-->
+	<script  id="J_cartTemplate" type="text/x-dot-template">
+		{{~it :value:index}}
+			<div class="cart-list">
+				<div class="list-table">
+				    <div class="list-row"> 
+				        <div class="cart-tr tr-check">
+				        	{{? value.selStatus===0}}
+				        	<i class="iconfont checkbox J_checkbox" data-listId = "{{=value.listId}}" data-status="{{=value.selStatus}}"></i>
+				        	{{?? value.selStatus===1}}
+				        	<i class="iconfont checkbox checked J_checkbox" data-listId = "{{=value.listId}}" data-status="{{=value.selStatus}}"></i>
+				        	{{?}}
+				        </div>
+				        <div class="cart-tr tr-img">  
+				            <a href="{{=value.productUrl}}">
+				            	<img alt="" src="{{=value.imageUrl}}" width="80" height="80">
+				            </a>  
+				        </div> 
+				        <div class="cart-tr tr-name">   
+				            <h3 class="name">
+				            	<a href="{{=value.productUrl}}">{{=value.productName}}</a>
+				            </h3>
+				        </div> 
+				        <div class="cart-tr tr-price">¥ {{=value.salePrice}}</div> 
+				        <div class="cart-tr tr-num">  
+				            <div class="change-num">
+								<a href="javascript:void(0)" class="J_minus">-</a>
+								<input tyep="text" name="{{=value.listId}}" value="{{=value.num}}" data-num="{{=value.num}}" data-limit="{{=value.buyLimit}}" autocomplete="off" class="J_num" />
+								<a href="javascript:void(0)" class="J_plus">+</a>
+							</div>  
+				        </div> 
+				        <div class="cart-tr tr-total">¥ {{=value.subtotal}}</div> 
+				        <div class="cart-tr tr-action"> 
+				            <a id="{{=value.listId}}" href="javascript:void(0);" title="删除" class="del J_delete">
+				                <i class="iconfont icon-close"></i>
+				            </a> 
+				        </div> 
+				    </div>
+				</div>
+			</div>
+		{{~}}
+	</script>
+	<footer>
+		<div class="footer-serve">
+			<div class="container">
+				<ul class="row">
+					<li>
+						<i class="iconfont icon-truck"></i>
+						<span>全场满¥99顺丰包邮（顺丰无法配送的区域将使用EMS）</span>
+					</li>
+					<li>
+						<i class="iconfont icon-card"></i>
+						<span>支持支付宝、微信、银联、转账付款、顺丰到付</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="footer-nav">
+			<div class="container">
+				<div class="footer-link row">
+					<dl class="col-links">
+						<dt>选购了解</dt>
+						<dd><a href="f19s.html">F19S</a></dd>
+						<dd><a href="goggles.html">VR眼镜</a></dd>
+					</dl>
+					<dl class="col-links">
+						<dt>帮助中心</dt>
+						<dd><a href="portal.html">账号管理</a></dd>
+						<dd><a href="guide.html">购物指南</a></dd>
+						<dd><a href="guide.html">订单操作</a></dd>
+					</dl>
+					<dl class="col-links">
+						<dt>服务支持</dt>
+						<dd><a href="policy.html">售后服务</a></dd>
+						<dd><a href="repair.html">自动寄修</a></dd>
+						<dd><a href="repair.html">维修服务</a></dd>
+					</dl>
+					<dl class="col-links">
+						<dt>关于卓耐斯</dt>
+						<dd><a href="about">关于我们</a></dd>
+						<dd><a href="contact.html">联系我们</a></dd>
+						<dd><a href="contact.html">加入我们</a></dd>
+					</dl>
+					<dl class="col-contact">
+						<p class="phone">400-000-0000</p>
+						<p class="time">周一至周日 9:00-18:30<br>（仅收市话费）</p>
+						<a class="btn btn-phone btn-sm" href="javascript:void(0);"><i class="iconfont icon-phone"></i>24小时在线服务</a>
+					</dl>
+				</div>
+			</div>
+		</div>
+		<div class="footer-site">
+			<div class="container">
+				<div class="row">
+					<div class="pull-left">
+						<div class="legal">
+							<div class="copyright">Copyright © 2017 Joynices 卓耐斯   保留所有权利。</div>
+							<div class="legal_link">
+								<a href="privacy.html">隐私政策</a><span>|</span><a href="legal.html">法律声明</a><span>|</span><a href="sitemap.html">网站地图</a>
+							</div>
+						</div>
+						<p class="record">京公安网安备 00000000000000</p>
+					</div>
+					<div class="pull-right">
+						<div class="social">
+			                <a href="#"><i class="iconfont icon-facebook"></i></a>
+			                <a href="#"><i class="iconfont icon-twitter"></i></a>
+			                <a href="#"><i class="iconfont icon-weibo"></i></a>
+			                <a href="#"><i class="iconfont icon-weixin"></i></a>
+			            </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script type="text/javascript" src="../assets/js/base.min.js?v=20180103"></script>
+	<script type="text/javascript" src="../scripts/cart.js?v=20180103"></script>
+</body>
+</html>

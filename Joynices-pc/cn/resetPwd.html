@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+	<title>重置密码-Joynices</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="shortcut icon" href="../assets/img/favicon.ico" />
+	<link rel="stylesheet" href="../assets/css/base.mim.css?v=20180103" />
+	<link rel="stylesheet" href="../styles/forgetPwd.min.css?v=20180103" />
+</head>
+<body>
+	<div class="wrapper">
+		<div class="device">
+		<div class="wap">
+			<div class="Jn-logo">
+				<a class="backindex" href="index.html">
+					<img src="../assets/img/logo-black.png" class="img-responsive" alt="logo">
+					<h6>科技让梦想放飞</h6>
+				</a>
+			</div>
+			<div class="content">
+				<div class="layout">
+					<div class="title-item">
+						<h4>重置密码</h4>
+					</div>
+					<form id="J_resetpwdForm">
+						<div class="putbox">
+					        <div class="inputlist">
+						       <input type="password" name="pwd" id="pwd" autocomplete="off" placeholder="请输入新密码" />
+						       <div class="boxline"></div>
+					        </div>
+					        <div class="inputlist">
+						       <input type="password" name="repwd" id="repwd" autocomplete="off" placeholder="请输入确认密码" />
+						       <div class="boxline"></div>
+					        </div>
+							<div class="fixed_bot">
+						        <button class="btn btn-primary btn-submit" id="J_resetBtn">完成</button> 
+						    </div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+	<div class="J-footer">
+		<div class="copyright">
+			如果您有任何关于JOYNICES账户的问题，请联系：88888888<br />
+			JOYNICES公司版权所有-京ICP备10000000-京公网安备0000000000000号-京ICP证00000000号
+		</div>
+	</div>
+	<script type="text/javascript" src="../assets/js/base.min.js?v=20180103" ></script>
+	<script type="text/javascript">
+		$(function(){
+			var pwd=$("#pwd"),repwd=$("#repwd"),rule=/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,16}$/;
+			$("#J_resetBtn").on("click",function(e){
+				e.preventDefault();
+			  var pwdVal=$.trim( pwd.val() );
+			  var repwdVal=$.trim(repwd.val());
+			  if(pwdVal===""){
+			    showError(pwd,"请输入密码");
+			    return false;
+			  }else if(!rule.test(pwdVal)){
+			    showError(pwd,"密码由8-16字母和数字组成，不能是纯数字或纯英文");
+			    return false;
+			  }else if(pwdVal!=repwdVal){
+				showError(repwd,"密码输入不一致");
+				return false;
+			  }
+			  console.log(pwdVal,repwdVal)
+			  //window.location.href="login.html";
+			});
+			$("#J_resetpwdForm").keypress(function(e){ 
+				if (e.keyCode === 13) {
+					e.preventDefault();
+					$("#J_resetBtn").click()
+				}
+			});
+			function showError(type,text){
+				var list=type.closest(".inputlist"),
+					errors='<p class="error">'+text+'</p>';
+				list.find(".error").remove();
+				list.append(errors);
+				
+				type.on("keydown",function(){
+					list.find(".error").remove()
+				})
+			}
+			
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+	<title>登录注册-Joynices</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="keywords" content="joynices,卓耐斯，无人机，航拍，飞行器，f19s，卓耐斯官网，卓耐斯商城，drone">
+	<meta name="viewport" content="width=1200" />
+	<link rel="shortcut icon" href="../assets/img/favicon.ico" />
+	<link rel="stylesheet" href="../assets/css/base.mim.css?v=20180103" />
+	<link rel="stylesheet" href="../styles/login.min.css?v=20180103" />
+	<script>
+		(function() {
+			var ua = navigator.userAgent.toLowerCase();
+			var is_iPd = ua.match(/(ipad|ipod|iphone)/i) != null;
+			var is_mobile = !!ua.match(/applewebkit.*mobile.*/);
+			var is_mobi = ua.toLowerCase().match(/(ipod|iphone|android|coolpad|mmp|smartphone|midp|wap|xoom|symbian|j2me|blackberry|win ce)/i) != null;
+			if(is_mobi && is_mobile){
+				window.location.replace(document.location.protocol + "../cn/mobile/m_login.html");
+			}
+		})();
+	</script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="device">
+			<div class="wap">
+				<div class="Jn-logo">
+					<a class="backindex" href="index.html">
+						<img src="../assets/img/logo-black.png" class="img-responsive" alt="logo">
+						<h6>科技让梦想放飞</h6>
+					</a>
+				</div>
+				<div class="wrapLogin loginWrap">
+					<div class="wrapLeft">
+						<div class="NoAccount">
+							<p class="mainTitle">没有账号?</p>
+							<p class="subhead">登录JOYNICES账号后我们能更方便为您提供优质的购买服务体验</p>
+							<p class="subtitle">如果没有JOYNICES账号您可以选择以下操作</p>
+							<a href="javascript:void(0)" id="CreatAccount" class="btn btn-white">创建账号</a>
+							<a href="tourist.html" class="btn btn-transparent">游客购买</a>
+						</div>
+						<div class="HaverAccount">
+							<p class="mainTitle">已有账号</p>
+							<p class="subhead">登录JOYNICES账号后我们能更方便为您提供优质的购买服务体验</p>
+							<div id="loginAccount" class="btn btn-white account">账号登录</div>
+							<p class="subtitle">如果没有JOYNICES账号您可以选择以下操作</p>
+							<a href="tourist.html" class="btn btn-transparent">游客购买</a>
+						</div>
+					</div>
+					<div class="wrapRight">
+						<div class="Tologin">
+							<p class="RTitle">账号登录</p>
+							<div class="tabs-con">
+								<form class="login-form" id="loginForm">
+							        <div class="inputlist">
+								        <input type="text" name="userName" autocomplete="off" placeholder="邮箱/手机号码" />
+										<div class="boxline"></div>
+							        </div>
+							        <div class="inputlist">
+								       <input type="password" name="userPwd" autocomplete="off" placeholder="密码" />
+								       <div class="boxline"></div>
+							        </div>
+							        <div class="inputlist code">
+										<input type="text" name="icode" autocomplete="off" placeholder="图片验证码"/>
+										<div class="boxline"></div>
+										<img src="../images/code/code1.jpg"  title="看不清换一张" alt="图片验证码" class="chkcode_img">
+									</div>
+									<div class="btnbg">
+										<button class="btn btn-primary signBtn" id="loginBtn">登录</button>
+										<div class="forgot-pwd pc-forpwd">
+									 		<a href="forgetPwd.html" class="forgetpwd">忘记密码？</a>
+										</div>
+									</div>
+									<!-- 其他登录方式 s -->
+									<div class="other-login-type">
+										<fieldset class="other-type-tit">
+											<legend align="center" class="other-type-txt">其他方式登录</legend>
+										</fieldset>
+										<div class="other-type-links">
+											<a class="icon-type btn-qq" data-type="qq" href="https://account.xiaomi.com/pass/sns/login/auth?appid=100284651&amp;&amp;callback=http%3A%2F%2Forder.mi.com%2Flogin%2Fcallback%3Ffollowup%3Dhttp%253A%252F%252Fwww.mi.com%252F%26sign%3DNWU4MzRmNjBhZmU4MDRmNmZkYzVjMTZhMGVlMGFmMTllMGY0ZTNhZQ%2C%2C&amp;sid=mi_eshop" title="QQ登录" target="_blank">
+												<i class="iconfont icon-qq"></i>
+											</a>
+											<a class="icon-type btn-weibo" data-type="weibo" href="association.html" title="微博登录" target="_blank">
+												<i class="iconfont icon-weibo"></i></a>
+											<a class="icon-type btn-weixin" data-type="weixin" href="https://account.xiaomi.com/pass/sns/login/auth?appid=wxxmzh&amp;scope=snsapi_login&amp;callback=http%3A%2F%2Forder.mi.com%2Flogin%2Fcallback%3Ffollowup%3Dhttp%253A%252F%252Fwww.mi.com%252F%26sign%3DNWU4MzRmNjBhZmU4MDRmNmZkYzVjMTZhMGVlMGFmMTllMGY0ZTNhZQ%2C%2C&amp;sid=mi_eshop" title="微信登录" target="_blank">
+												<i class="iconfont icon-weixin"></i></a>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="ToRegister">
+							<p class="RTitle">账号注册</p>
+							<div class="TabControl" id="TabControl">
+								<span class="active ph" name="regphForm">手机</span><span class="em" name="regemForm">邮箱</span>
+							</div>
+							<div class="tabs-con">
+								<form class="login-form" id="regphForm">
+									<div class="inputcountry">
+								        <input type="text" name="area" id="J_countryCode" _code="+86" value="中国(+86)" readonly="readonly">
+								        <i class="icon iconfont icon-down"></i>
+								        <div class="country-container-panel"></div>
+							        </div>
+									<div class="inputlist">
+								        <input type="tel" name="phone" autocomplete="off" placeholder="手机号码" />
+										<div class="boxline"></div>
+							        </div>
+							        <div class="inputlist">
+								        <input type="password" name="password" autocomplete="off" placeholder="请设置密码" />
+										<div class="boxline"></div>
+							        </div>
+							        <div class="inputlist code">            
+										<input type="text" name="captcha" autocomplete="off" placeholder="验证码" />
+										<div class="boxline"></div>
+										<span class="remain">                 
+											<a href="javascript:void(0)" title="发送短信">获取验证码</a>               
+										</span> 
+									</div>
+									<div class="btnbg">
+										<button class="btn btn-primary signBtn" id="regphBtn">立即注册</button>
+										<div class="agreement">
+											<span class="text">注册帐号即表示您同意并愿意遵守卓耐斯的<a href="privacy.html">隐私政策</a></span>
+										</div>
+									</div>
+								</form>
+								<form class="login-form" id="regemForm" style="display: none;">
+									<div class="inputlist">
+								        <input type="email" name="email" autocomplete="off" placeholder="邮箱" />
+										<div class="boxline"></div>
+							        </div>
+							        <div class="inputlist">
+								        <input type="password" name="password" autocomplete="off" placeholder="请设置密码" />
+										<div class="boxline"></div>
+							        </div>
+							        <div class="inputlist code">            
+										<input type="text" name="captcha" autocomplete="off" placeholder="验证码" />
+										<div class="boxline"></div>
+										<span class="remain">                 
+											<a href="javascript:void(0)" title="发送短信">获取验证码</a>               
+										</span> 
+									</div>
+									<div class="btnbg">
+										<button class="btn btn-primary signBtn" id="regemBtn">立即注册</button>
+										<div class="agreement">
+											<span class="text">注册帐号即表示您同意并愿意遵守卓耐斯的<a href="privacy.html">隐私政策</a></span>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="J-footer">
+		<div class="copyright">
+			Copyright © 2017 Joynices 卓耐斯 保留所有权利。<br />
+			如果您有任何关于JOYNICES账户的问题，请联系：88888888
+		</div>
+	</div>
+	<script type="text/javascript" src="../assets/js/base.min.js?v=20180103" ></script>
+	<script type="text/javascript" src="../scripts/login.js?v=20180103"></script>
+</body>
+</html>

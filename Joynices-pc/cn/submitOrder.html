@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+	<title>填写订单信息</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1200">
+	<link rel="shortcut icon" href="../assets/img/favicon.ico" />
+	<link rel="stylesheet" href="../assets/css/base.mim.css?v=20180103" />
+	<link rel="stylesheet" href="../styles/submitOrder.min.css?v=20180103">
+</head>
+<body>
+	<div class="site-header">
+		<div class="container">
+			<a class="site-logo" href="index.html">
+				<img src="../assets/img/logo-black.png" class="img-responsive" alt="logo">
+			</a>
+			<div class="site-title">
+				<h2>订单提交</h2>
+			</div>
+			<div class="site-user navbar-collapse">
+				<!--未登录时-->
+				<a class="link" href="login.html">登录/注册</a>
+				<!--登录时-->
+				<!--<ul class="nav">
+					<li>
+	                	<a class="link" href="portal.html"><i class="iconfont icon-user"></i></a>
+						<ul class="submenu nav-user">
+							<li><a href="portal.html">个人中心</a></li>
+							<li><a href="order.html">我的订单</a></li>
+							<li><a href="login.html">退出登录</a></li>
+						</ul>
+					</li>
+	            </ul>-->
+			</div>
+		</div>		
+	</div>
+	<div class="main">
+		<div class="container">
+			<div class="checkout-box">
+				<div class="section section-address">
+					<div class="section_title">收货地址</div>
+					<div class="section_body">
+						<div class="row" id="J_addressList">
+							<div class="adddress_item J_addressItem selected" data-address_id="1001" data-consignee="姬月" data-phone="185****5555" data-status="1" data-areas="广东省 深圳市 南山区" data-detail="南山社区文体活动中心-儿童剧场，南山大道与南头街交汇处" data-zipcode="100032">
+								<dl>
+									<dt><span class="uname">姬月</span></dt>
+									<dd>
+										<div class="utel">185****5555</div>
+										<div class="uaddress">广东省 深圳市 南山区<br>南山社区文体活动中心-儿童剧场，南山大道与南头街交汇处</div>
+									</dd>
+								</dl>
+								<div class="actions J_addressModify">修改</div>
+							</div>
+							<div class="adddress_item J_addressItem" data-address_id="1002" data-consignee="Tom" data-phone="155****5555" data-status="0" data-areas="河北省 石家庄市 鹿泉市" data-detail="石家庄植物园" data-zipcode="050200">
+								<dl>
+									<dt><span class="uname">Tom</span></dt>
+									<dd>
+										<div class="utel">155****5555</div>
+										<div class="uaddress">河北省 石家庄市 鹿泉市<br>石家庄植物园</div>
+									</dd>
+								</dl>
+								<div class="actions J_addressModify">修改</div>
+							</div>
+							<div class="adddress_item J_addressItem" data-address_id="1003" data-consignee="陈晨" data-phone="185****1478" data-status="0" data-areas="上海市 上海市 黄浦区" data-detail="半淞园路街道627号" data-zipcode="200001">
+								<dl>
+									<dt><span class="uname">陈晨</span></dt>
+									<dd>
+										<div class="utel">185****1478</div>
+										<div class="uaddress">上海市 上海市 黄浦区<br>半淞园路街道627号</div>
+									</dd>
+								</dl>
+								<div class="actions J_addressModify">修改</div>
+							</div>
+							<div class="adddress_item J_addressItem hide" data-address_id="1004" data-consignee="婉清" data-phone="139****1234" data-status="0" data-areas="上海市 上海市 浦东新区" data-detail="上海科技馆世纪大道2000" data-zipcode="200135">
+								<dl>
+									<dt><span class="uname">婉清</span></dt>
+									<dd>
+										<div class="utel">139****1234</div>
+										<div class="uaddress">上海市 上海市 浦东新区<br>上海科技馆世纪大道2000</div>
+									</dd>
+								</dl>
+								<div class="actions J_addressModify">修改</div>
+							</div>
+							<div class="adddress_item J_addressItem hide" data-address_id="1005" data-consignee="晓峰" data-phone="189****1234" data-status="0" data-areas="上海市 上海市 浦东新区" data-detail="上海科技馆世纪大道2000" data-zipcode="200135">
+								<dl>
+									<dt><span class="uname">晓峰</span></dt>
+									<dd>
+										<div class="utel">189****1234</div>
+										<div class="uaddress">上海市 上海市 浦东新区<br>上海科技馆世纪大道2000</div>
+									</dd>
+								</dl>
+								<div class="actions J_addressModify">修改</div>
+							</div>
+							<div class="adddress_item address-item-new" id="J_newAddress">
+								<dl>
+									<dt><span>添加并使用</span></dt>
+									<dd>
+										<p><span class="iconfont icon-add"></span></p><div>新地址</div>
+									</dd>
+								</dl>
+							</div>
+							<div class="address_more" id="J_addressMore">
+								<span class="text">显示更多收货地址<i class="iconfont icon-down"></i></span>
+								<span class="text hide">收起更多收货地址<i class="iconfont icon-down up"></i></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="section section_logistics">
+					<div class="section_title">物流方式</div>
+					<div class="section_body">
+						<ul class="logistics_cont row" id="J_logisticsList">
+							<li class="J_option selected" data-type="logistics" data-value="sf" data-amount="15">
+								<div class="ship">
+									<img src="../assets/img/shunfeng.png" class="img" />
+									<span class="name">顺丰</span>
+									<span class="cost">¥15</span>
+								</div>
+							</li>
+							<!-- <li class="J_option" data-type="logistics" data-value="ems" data-amount="0">
+								<div class="ship">
+									<img src="../assets/img/ems.png" class="img" />
+									<span class="name">EMS</span>
+									<span class="cost">包邮</span>
+								</div>
+							</li> -->
+						</ul>
+					</div>
+				</div>
+				<div class="section section-payment">
+					<div class="section_title">支付方式</div>
+					<div class="section_body">
+						<ul class="options row">
+							<li data-type="payment" data-value="1">支持支付宝、微信、银联、顺丰到付</li>
+						</ul>
+					</div>
+				</div>
+				<div class="section section-invoice">
+					<div class="section_title">发票信息</div>
+					<div class="section_body">
+						<ul class="options-list row J_invoiceList">
+							<li class="J_option selected" data-type="invoice" data-value="not">不需要发票</li>
+							<li class="J_option" data-type="invoice" data-value="electronic">电子发票（非纸质）</li>
+							<li class="J_option" data-type="invoice" data-value="plain">普通发票（纸质）</li>
+						</ul>
+						<ul class="options-list row hide" id="J_invoiceTitle">
+							<li class="J_option selected" data-type="invoice_way" data-value="personal">个人</li>
+							<li class="J_option" data-type="invoice_way" data-value="company">单位</li>
+						</ul>
+						<div class="invoice-select hide" id="J_invoiceInfo">
+							<div class="form-invoice">
+								<div class="invoice_info">
+									<div class="inputlist">
+								       	<input class="invoiceInput" type="text" name="invoice_title" autocomplete="off" placeholder="发票抬头" />
+							       </div>
+								</div>
+								<div class="invoice_info hide">
+									<div class="inputlist">
+								       	<input class="invoiceInput" type="text" name="invoice_company" id="invoice_company"  autocomplete="off" placeholder="纳税人识别号" />
+							       </div>
+								</div>
+								<div class="invoice_info">
+									<div class="inputlist">
+								       	<input class="invoiceInput" type="text" name="invoice_phone" id="invoice_phone" autocomplete="off" placeholder="收票人手机" />
+							       </div>
+								</div>
+								<div class="invoice_info">
+									<div class="inputlist">
+								       	<input class="invoiceInput" type="email" name="invoice_email" id="invoice_email"  autocomplete="off" placeholder="收票人邮箱" />
+							       </div>
+								</div>
+							</div>
+							<p>发票内容：购买商品明细</p>
+						</div>
+						<div class="tips">发票须知：电子发票可在订单完成后，在您的邮箱中下载和查看。</div>
+					</div>
+				</div>
+				<div class="section section-goods">
+					<div class="section_title">商品信息<a class="more" href="cart.html">前往购物车修改 ><span class="iconfont icon-cell"></span></a></div>
+					<div class="section_body">
+						<div class="table-wrap">
+							<table class="table">
+								<tbody id="J_goodsList">
+									<tr>
+										<td><img src="../images/product/f19s-angle2!60x60.jpg" width="80" height="80"></td>
+										<td>F19S无人机 套装</td>
+										<td>¥3288 x 2</td>
+										<td class="total">¥6576</td>
+									</tr>  
+									<tr>
+										<td><img src="../images/product/f19s-dc1!60x60.jpg" width="80" height="80"></td>
+										<td>F19S-原装智能电芯可续航36min</td>
+										<td>¥488 x 3</td>
+										<td class="total">¥1464</td>
+									</tr> 
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="section_count">
+					<div class="row">
+						<div class="pull-right">
+							<table class="table_count" id="J_moneyBox">
+								<tbody>
+									<tr><td>商品总金额：</td><td>¥8040</td></tr>
+									<tr class="total_fee"><td>运费：</td><td id="J_freight">¥20</td></tr>
+									<tr class="total-price"><td>总计：</td><td><span id="J_totalPrices">¥8060</span></td></tr>
+								</tbody>
+							</table>
+							<div class="pull-right count_btn">
+								<button class="btn btn-primary btn-big" id="J_submitPay">提交订单</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script id="J_newAddressTemplate" type="text/x-dot-template">
+		<div class="adddress_item J_addressItem" 
+			data-address_id="{{=it.address_id}}" 
+			data-consignee="{{=it.consignee}}" 
+			data-phone="{{=it.phone}}" 
+			data-status="{{=it.status}}" 
+			data-areas="{{=it.areas}}" 
+			data-detail="{{=it.detail}}" 
+			data-zipcode="{{=it.zipcode}}">
+			<dl>
+				<dt><span class="uname">{{=it.consignee}}</span></dt>
+				<dd>
+					<div class="utel">{{=it.phone}}</div>
+					<div class="uaddress">{{=it.areas}}<br/>{{=it.detail}}</div>
+				</dd>
+			</dl>
+			<div class="actions J_addressModify">修改</div>
+		</div>
+	</script>
+	<footer>
+		<div class="footer-serve">
+			<div class="container">
+				<ul class="row">
+					<li>
+						<i class="iconfont icon-truck"></i>
+						<span>全场满¥99顺丰包邮（顺丰无法配送的区域将使用EMS）</span>
+					</li>
+					<li>
+						<i class="iconfont icon-card"></i>
+						<span>支持支付宝、微信、银联、转账付款、顺丰到付</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="footer-nav">
+			<div class="container">
+				<div class="footer-link row">
+					<dl class="col-links">
+						<dt>选购了解</dt>
+						<dd><a href="f19s.html">F19S</a></dd>
+						<dd><a href="goggles.html">VR眼镜</a></dd>
+					</dl>
+					<dl class="col-links">
+						<dt>帮助中心</dt>
+						<dd><a href="portal.html">账号管理</a></dd>
+						<dd><a href="guide.html">购物指南</a></dd>
+						<dd><a href="guide.html">订单操作</a></dd>
+					</dl>
+					<dl class="col-links">
+						<dt>服务支持</dt>
+						<dd><a href="policy.html">售后服务</a></dd>
+						<dd><a href="repair.html">自动寄修</a></dd>
+						<dd><a href="repair.html">维修服务</a></dd>
+					</dl>
+					<dl class="col-links">
+						<dt>关于卓耐斯</dt>
+						<dd><a href="about">关于我们</a></dd>
+						<dd><a href="contact.html">联系我们</a></dd>
+						<dd><a href="contact.html">加入我们</a></dd>
+					</dl>
+					<dl class="col-contact">
+						<p class="phone">400-000-0000</p>
+						<p class="time">周一至周日 9:00-18:30<br>（仅收市话费）</p>
+						<a class="btn btn-phone btn-sm" href="javascript:void(0);"><i class="iconfont icon-phone"></i>24小时在线服务</a>
+					</dl>
+				</div>
+			</div>
+		</div>
+		<div class="footer-site">
+			<div class="container">
+				<div class="row">
+					<div class="pull-left">
+						<div class="legal">
+							<div class="copyright">Copyright © 2017 Joynices 卓耐斯   保留所有权利。</div>
+							<div class="legal_link">
+								<a href="privacy.html">隐私政策</a><span>|</span><a href="legal.html">法律声明</a><span>|</span><a href="sitemap.html">网站地图</a>
+							</div>
+						</div>
+						<p class="record">京公安网安备 00000000000000</p>
+					</div>
+					<div class="pull-right">
+						<div class="social">
+			                <a href="#"><i class="iconfont icon-facebook"></i></a>
+			                <a href="#"><i class="iconfont icon-twitter"></i></a>
+			                <a href="#"><i class="iconfont icon-weibo"></i></a>
+			                <a href="#"><i class="iconfont icon-weixin"></i></a>
+			            </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script type="text/javascript" src="../assets/js/base.min.js?v=20180103"></script>
+	<script type="text/javascript" src="../assets/js/city-data.min.js?v=20180103"></script>
+	<script type="text/javascript" src="../scripts/submitOrder.js?v=20180103" ></script>
+</body>
+</html>

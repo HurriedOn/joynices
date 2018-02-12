@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+	<title>账号安全-Joynices</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="shortcut icon" href="../assets/img/favicon.ico" />
+	<link rel="stylesheet" href="../assets/css/base.mim.css?v=20180103" />
+	<link rel="stylesheet" href="../styles/forgetPwd.min.css?v=20180103" />
+</head>
+<body>
+	<div class="wrapper">
+		<div class="device">
+			<div class="wap">
+				<div class="Jn-logo">
+					<a class="backindex" href="index.html">
+						<img src="../assets/img/logo-black.png" class="img-responsive" alt="logo">
+						<h6>科技让梦想放飞</h6>
+					</a>
+				</div>
+				<div class="content">
+					<div class="layout">
+						<div class="title-item">
+							<h4>找回密码</h4>
+						</div>
+						<!-- phone -->
+						<div class="putbox sendtext" id="J_phVerify">
+							<div class="identity_phone_effect">
+								<h4 class="disten">为了保护帐号安全，需要验证手机有效性</h4>
+								<div class="description">
+									<p class="send-tip J_tip">点击发送按钮，将会发送一条有验证码的短信至手机</p>
+									<p class="masked">139******59</p>
+								</div>
+							</div>
+							<div class="inputlist code" style="display: none">            
+								<input type="text" name="captcha" id="J_captcha" autocomplete="off" placeholder="验证码" />
+								<div class="boxline"></div>
+								<span class="remain">                 
+									<a href="javascript:void(0)" title="发送短信">获取验证码</a>               
+								</span> 
+							</div>
+							<div class="fixed_bot">
+								<input class="btn btn-primary btn-submit" id="J_phSendBtn" type="button" value="发送">
+							</div>
+						</div>
+
+						<!-- email -->
+						<div class="putbox sendtext" id="J_emVerify">
+							<div class="identity_phone_effect">
+								<h4 class="disten">为了保护帐号安全，需要验邮箱证有效性</h4>
+								<div class="description">
+									<p class="send-tip J_tip">点击发送按钮，将会发送一条重置密码链接至邮箱</p>
+									<p class="masked">160007****@qq.com</p>
+								</div>
+							</div>
+							<div class="fixed_bot">
+								<input class="btn btn-primary btn-submit" id="J_emSendBtn" type="button" value="发送">
+								<button class="btn btn-primary btn-submit hide">立即登录邮箱</button>
+								<button class="btn btn-send btn-submit hide" disabled="disabled">重新发送邮件(59)S</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="J-footer">
+		<div class="copyright">
+			如果您有任何关于JOYNICES账户的问题，请联系：88888888<br /> JOYNICES公司版权所有-京ICP备10000000-京公网安备0000000000000号-京ICP证00000000号
+		</div>
+	</div>
+	<script type="text/javascript" src="../assets/js/base.min.js?v=20180103" ></script>
+	<script type="text/javascript">
+		$(function(){
+			function checkWay(p) {
+				var t = new RegExp("(^|&)" + p + "=([^&]*)(&|$)", "i"),
+					a = location.search.substr(1).match(t);  
+				return null !== a ? decodeURI(a[2]) : null
+			}
+			var way=checkWay("user"),rule=/^1\d{10}$/;
+			if(!rule.test(way)){ //email
+				$("#J_emVerify").show(),$("#J_phVerify").hide();
+				$("#J_emSendBtn").on("click",function(){
+					$("#J_emVerify").find(".J_tip").html("重置密码链接已发至您的邮箱，请登录邮箱修改");
+					$(this).addClass("hide").siblings().removeClass("hide")
+				})
+
+
+			}else{  //phone
+				$("#J_phVerify").show(),$("#J_emVerify").hide();
+				$("#J_phSendBtn").on("click",function(){
+					$("#J_phVerify").find(".J_tip").html("短信验证已发送至您的手机");
+					$("#J_phVerify").find(".inputlist").show();
+					$(this).val("确定").attr("id","J_okBtn");
+					
+					$("#J_okBtn").on("click",function(){
+						var code=$("#J_captcha"),
+							codeVal=$.trim(code.val());
+						if(codeVal===""){
+							showError(code,"请输入验证码");
+						    return false;
+						}else if(!(/^\w{4,8}$/.test(codeVal))){
+						  	showError(code,"验证码错误");
+						  	return false
+						}
+						window.location.href="resetPwd.html?user="+way;
+					})					
+				});
+
+			}
+			function showError(type,text){
+				var list=type.closest(".inputlist"),
+					errors='<p class="error">'+text+'</p>';
+				list.find(".error").remove();
+				list.append(errors);
+				
+				type.on("keydown",function(){
+					list.find(".error").remove()
+				})
+			}
+
+			
+		});
+		
+	</script>
+</body>
+
+</html>
