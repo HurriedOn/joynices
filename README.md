@@ -232,4 +232,23 @@ documentElement 是整个节点树的根节点root，即<html> 标签；
 	
 以HTML超文本标记语言为例：整个文档的一个根就是,在DOM中可以使用document.documentElement来访问它，它就是整个节点树的根节点。而body是子节点，要访问到body标签，在脚本中应该写：document.body。
 
+### 字蛛 字体压缩      
+http://blog.sina.com.cn/s/blog_a025a3670102wfbv.html 
+
+### 压缩 image css js
+http://www.cnblogs.com/JreeyQi/p/4900864.html
+
+### 百度地图
+http://api.map.baidu.com/lbsapi/creatmap/index.html 
+
+### meta用法介绍
+http://www.cnblogs.com/zhongxinWang/p/4105915.html
+
+### dot.js 渲染引擎
+http://geek.csdn.net/news/detail/190118 
+
+### avalon 2 高性能 的前端MVVM框架
+http://avalonjs.coding.me/vm.html
+
+
 
