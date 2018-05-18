@@ -7,6 +7,7 @@
 	http://www.dowebok.com/77.html/fullpage.js 
 	http://www.dowebok.com/143.html(兼容ie低版本)
 	jquery.fullpage.js超出满屏时的设置http://www.dowebok.com/demo/2014/77/
+	http://www.dowebok.com/191.html
   
 ### 3、多次绑定事件就会出现多次相同的操作，多次创建同一个对象也会出现问题。
      如果要这样，解决方法：
